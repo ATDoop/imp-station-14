@@ -1,0 +1,21 @@
+- type: marking
+  id: ArachnidAppendagesStumps
+  bodyPart: Tail
+  markingCategory: Tail
+  speciesRestriction: [Arachnid]
+  sprites:
+  - sprite: _Impstation/Mobs/Customization/Arachnid/appendages.rsi
+    state: stumps_primary
+  - sprite: _Impstation/Mobs/Customization/Arachnid/appendages.rsi
+    state: stumps_secondary
+
+- type: marking
+  id: ArachnidAppendagesShorter
+  bodyPart: Tail
+  markingCategory: Tail
+  speciesRestriction: [Arachnid]
+  sprites:
+  - sprite: _Impstation/Mobs/Customization/Arachnid/appendages.rsi
+    state: shorterlegs_primary
+  - sprite: _Impstation/Mobs/Customization/Arachnid/appendages.rsi
+    state: shorterlegs_secondary
