@@ -68,3 +68,54 @@
     sprite: _Impstation/Clothing/Head/Hardsuits/dinosuit.rsi
   - type: FactionClothing
     faction: Dino
+
+#Bug Empire hardsuit
+
+- type: entity
+  parent: [ ClothingHeadHardsuitBase, ClothingHeadSuitWithLightBase ]
+  id: ClothingHeadHelmetHardsuitEmpire
+  name: dyrt empire helmet
+  description: It's a little... cute?
+  components:
+  - type: Sprite
+    sprite: _Impstation/Clothing/OuterClothing/Hardsuits/empirehardsuit.rsi #imp edit
+    layers:
+    - state: icon-helmet
+    - state: icon-helmet-unshaded
+      shader: unshaded
+    - state: icon-helmet-light
+      visible: false
+      shader: unshaded
+      map: [ "light" ]
+  - type: Clothing
+    sprite: _Impstation/Clothing/OuterClothing/Hardsuits/empirehardsuit.rsi #imp edit
+    clothingVisuals:
+      head:
+      - state: equipped-HELMET
+        offset: "0, 0.187"
+      - state: equipped-HELMET-unshaded
+        shader: unshaded
+        offset: "0, 0.187"
+  - type: ToggleableLightVisuals
+    clothingVisuals:
+      head:
+      - state: equipped-HELMET-light
+        shader: unshaded
+        offset: "0, 0.187"
+  - type: PointLight
+    color: "#ff003b"
+  - type: PressureProtection
+    highPressureMultiplier: 0.08
+    lowPressureMultiplier: 1000
+  - type: TemperatureProtection
+    heatingCoefficient: 0.005
+    coolingCoefficient: 0.005
+  - type: FireProtection
+    reduction: 0.2
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.9
+        Slash: 0.9
+        Piercing: 0.9
+        Heat: 0.9
