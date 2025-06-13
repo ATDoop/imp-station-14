@@ -1,0 +1,42 @@
+#Soul Lantern
+- type: entity
+  name: soul lantern
+  parent: [BaseWeaponBatterySmall, BaseMagicalContraband]
+  id: WeaponReaperLantern
+  description: This must be that green energy you've heard so much about.
+  components:
+  - type: Sprite
+    sprite: _Impstation/Objects/Weapons/Guns/Battery/soullantern.rsi
+    layers:
+    - state: base
+    - state: light
+      shader: unshaded
+  - type: Item
+    sprite: _Impstation/Objects/Weapons/Guns/Battery/soullantern.rsi
+    inhandVisuals:
+      left:
+      - state: inhand-left
+      - state: inhand-left-light
+        shader: unshaded
+      right:
+      - state: inhand-right
+      - state: inhand-right-light
+        shader: unshaded
+  - type: PointLight
+    radius: 1.5
+    energy: 2.3
+    color: "#75ef0a"
+  - type: Gun
+    projectileSpeed: 5
+    soundGunshot:
+      path: /Audio/_Impstation/Weapons/Guns/Gunshots/blasterrunner.ogg
+  - type: ProjectileBatteryAmmoProvider
+    proto: BulletLanternSoul
+    fireCost: 100
+  - type: BatterySelfRecharger
+    autoRecharge: true
+    autoRechargeRate: 40
+  - type: Appearance
+  - type: Tag
+    tags:
+    - Sidearm

@@ -64,3 +64,25 @@
     soundHit:
       collection: WeakHit
     forceSound: true
+
+- type: entity
+  name : lost soul
+  id: BulletLanternSoul
+  parent: BulletLaser
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    sprite: _Impstation/Objects/Weapons/Guns/Projectiles/energybolts.rsi
+    layers:
+    - state: lightsynd
+      shader: unshaded
+  - type: Ammo
+    muzzleFlash: MuzzleFlashEffectSyndLaser
+  - type: Projectile
+    impactEffect: BulletImpactEffectSyndicate
+    damage:
+      types:
+        Cold: 15
+    soundHit:
+      collection: WeakHit
+    forceSound: true
