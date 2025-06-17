@@ -1,0 +1,305 @@
+# Chest
+- type: marking
+  id: ReaperChestEyes1
+  bodyPart: Eyes
+  markingCategory: Chest
+  speciesRestriction: [ Reaper ]
+  forcedColoring: true
+  coloring:
+    default:
+      type:
+        !type:EyeColoring
+  sprites:
+  - sprite: _Impstation/Mobs/Customization/Reaper/chest.rsi
+    state: chesteyes1
+  shader: unshaded
+
+- type: marking
+  id: ReaperChestEyes2
+  bodyPart: Eyes
+  markingCategory: Chest
+  speciesRestriction: [ Reaper ]
+  forcedColoring: true
+  coloring:
+    default:
+      type:
+        !type:EyeColoring
+  sprites:
+  - sprite: _Impstation/Mobs/Customization/Reaper/chest.rsi
+    state: chesteyes2
+  shader: unshaded
+
+- type: marking
+  id: ReaperChestEyes3
+  bodyPart: Eyes
+  markingCategory: Chest
+  speciesRestriction: [ Reaper ]
+  forcedColoring: true
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+        color: "#FFFFFF"
+  sprites:
+  - sprite: _Impstation/Mobs/Customization/Reaper/chest.rsi
+    state: chesteyes3
+
+- type: marking
+  id: ReaperChestEyes4
+  bodyPart: Eyes
+  markingCategory: Chest
+  speciesRestriction: [ Reaper ]
+  forcedColoring: true
+  coloring:
+    default:
+      type:
+        !type:EyeColoring
+  sprites:
+  - sprite: _Impstation/Mobs/Customization/Reaper/chest.rsi
+    state: chesteyes4
+  shader: unshaded
+
+- type: marking
+  id: ReaperChestEyes5
+  bodyPart: Eyes
+  markingCategory: Chest
+  speciesRestriction: [ Reaper ]
+  forcedColoring: true
+  coloring:
+    default:
+      type:
+        !type:EyeColoring
+  sprites:
+  - sprite: _Impstation/Mobs/Customization/Reaper/chest.rsi
+    state: chesteyes5
+  shader: unshaded
+# Head
+
+# Snout
+
+# Eyes
+
+- type: marking
+  id: ReaperEyesTriple
+  bodyPart: Eyes
+  markingCategory: Eyes
+  speciesRestriction: [ Reaper ]
+  forcedColoring: true
+  coloring:
+    default:
+      type:
+        !type:EyeColoring
+  sprites:
+  - sprite: _Impstation/Mobs/Customization/Reaper/eyes.rsi
+    state: eyes1
+  shader: unshaded
+
+- type: marking
+  id: ReaperEyesHeart
+  bodyPart: Eyes
+  markingCategory: Eyes
+  speciesRestriction: [ Reaper ]
+  forcedColoring: true
+  coloring:
+    default:
+      type:
+        !type:EyeColoring
+  sprites:
+  - sprite: _Impstation/Mobs/Customization/Reaper/eyes.rsi
+    state: eyes2
+  shader: unshaded
+
+- type: marking
+  id: ReaperEyesAngry
+  bodyPart: Eyes
+  markingCategory: Eyes
+  speciesRestriction: [ Reaper ]
+  forcedColoring: true
+  coloring:
+    default:
+      type:
+        !type:EyeColoring
+  sprites:
+  - sprite: _Impstation/Mobs/Customization/Reaper/eyes.rsi
+    state: eyes3
+  shader: unshaded
+
+- type: marking
+  id: ReaperEyesLopsided
+  bodyPart: Eyes
+  markingCategory: Eyes
+  speciesRestriction: [ Reaper ]
+  forcedColoring: true
+  coloring:
+    default:
+      type:
+        !type:EyeColoring
+  sprites:
+  - sprite: _Impstation/Mobs/Customization/Reaper/eyes.rsi
+    state: eyes4
+  shader: unshaded
+
+- type: marking
+  id: ReaperEyesAsymmetrical
+  bodyPart: Eyes
+  markingCategory: Eyes
+  speciesRestriction: [ Reaper ]
+  forcedColoring: true
+  coloring:
+    default:
+      type:
+        !type:EyeColoring
+  sprites:
+  - sprite: _Impstation/Mobs/Customization/Reaper/eyes.rsi
+    state: eyes5
+  shader: unshaded
+
+- type: marking
+  id: ReaperEyesDots
+  bodyPart: Eyes
+  markingCategory: Eyes
+  speciesRestriction: [ Reaper ]
+  forcedColoring: true
+  coloring:
+    default:
+      type:
+        !type:EyeColoring
+  sprites:
+  - sprite: _Impstation/Mobs/Customization/Reaper/eyes.rsi
+    state: eyes6
+  shader: unshaded
+
+- type: marking
+  id: ReaperEyesSmile
+  bodyPart: Eyes
+  markingCategory: Eyes
+  speciesRestriction: [ Reaper ]
+  forcedColoring: true
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+        color: "#FFFFFF"
+  sprites:
+  - sprite: _Impstation/Mobs/Customization/Reaper/eyes.rsi
+    state: eyes7
+  shader: unshaded
+
+- type: marking
+  id: ReaperEyesSkull
+  bodyPart: Eyes
+  markingCategory: Eyes
+  speciesRestriction: [ Reaper ]
+  forcedColoring: true
+  coloring:
+    default:
+      type:
+        !type:EyeColoring
+  sprites:
+  - sprite: _Impstation/Mobs/Customization/Reaper/eyes.rsi
+    state: eyes8
+  shader: unshaded
+
+- type: marking
+  id: ReaperEyesSingle
+  bodyPart: Eyes
+  markingCategory: Eyes
+  speciesRestriction: [ Reaper ]
+  forcedColoring: true
+  coloring:
+    default:
+      type:
+        !type:EyeColoring
+  sprites:
+  - sprite: _Impstation/Mobs/Customization/Reaper/eyes.rsi
+    state: eyes9
+  shader: unshaded
+
+- type: marking
+  id: ReaperEyesSad
+  bodyPart: Eyes
+  markingCategory: Eyes
+  speciesRestriction: [ Reaper ]
+  forcedColoring: true
+  coloring:
+    default:
+      type:
+        !type:EyeColoring
+  sprites:
+  - sprite: _Impstation/Mobs/Customization/Reaper/eyes.rsi
+    state: eyes10
+  shader: unshaded
+
+- type: marking
+  id: ReaperEyesSingleBig
+  bodyPart: Eyes
+  markingCategory: Eyes
+  speciesRestriction: [ Reaper ]
+  forcedColoring: true
+  coloring:
+    default:
+      type:
+        !type:EyeColoring
+  sprites:
+  - sprite: _Impstation/Mobs/Customization/Reaper/eyes.rsi
+    state: eyes11
+  shader: unshaded
+
+- type: marking
+  id: ReaperEyesMaw
+  bodyPart: Eyes
+  markingCategory: Eyes
+  speciesRestriction: [ Reaper ]
+  forcedColoring: true
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+        color: "#FFFFFF"
+  sprites:
+  - sprite: _Impstation/Mobs/Customization/Reaper/eyes.rsi
+    state: eyes12
+  shader: unshaded
+# RArm
+
+# LArm
+
+# RLeg
+
+# LLeg
+
+# UndergarmentBottom
+
+# UndergarmentTop
+
+# LFoot
+
+# RFoot
+
+# LHand
+
+# RHand
+
+# FacialHair
+
+# Hair
+
+# HeadSide
+
+# HeadTop
+
+# Tail
+
+# Overlay
+- type: marking
+  id: ReaperOverlayRobe1
+  bodyPart: Head
+  markingCategory: Overlay
+  forcedColoring: true
+  followSkinColor: true
+  speciesRestriction: [Reaper]
+  sprites:
+  - sprite: _Impstation/Mobs/Customization/Reaper/overlay.rsi
+    state: robe1
+
+

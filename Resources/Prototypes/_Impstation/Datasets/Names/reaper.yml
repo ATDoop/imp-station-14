@@ -1,0 +1,11 @@
+- type: localizedDataset
+  id: NamesReaperFirst
+  values:
+    prefix: reaper-first-
+    count: 26
+
+- type: localizedDataset
+  id: NamesReaperLast
+  values:
+    prefix: reaper-last-
+    count: 5

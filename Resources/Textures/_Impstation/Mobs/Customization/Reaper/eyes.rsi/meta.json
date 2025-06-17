@@ -1,0 +1,60 @@
+{
+    "version": 1,
+    "license": "CC-BY-SA-3.0",
+    "copyright": "by atdoop (github) for impstation",
+
+    "size": {
+        "x": 32,
+        "y": 32
+    },
+    "states": [
+        {
+            "name": "eyes1",
+            "directions": 4
+        },
+        {
+            "name": "eyes2",
+            "directions": 4
+        },
+        {
+            "name": "eyes3",
+            "directions": 4
+        },
+        {
+            "name": "eyes4",
+            "directions": 4
+        },
+        {
+            "name": "eyes5",
+            "directions": 4
+        },
+        {
+            "name": "eyes6",
+            "directions": 4
+        },
+        {
+            "name": "eyes7",
+            "directions": 4
+        },
+        {
+            "name": "eyes8",
+            "directions": 4
+        },
+        {
+            "name": "eyes9",
+            "directions": 4
+        },
+        {
+            "name": "eyes10",
+            "directions": 4
+        },
+        {
+            "name": "eyes11",
+            "directions": 4
+        },
+        {
+            "name": "eyes12",
+            "directions": 4
+        }
+    ]
+}

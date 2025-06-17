@@ -1,0 +1,32 @@
+{
+    "version": 1,
+    "license": "CC-BY-SA-3.0",
+    "copyright": "by atdoop (github) for impstation",
+
+    "size": {
+        "x": 32,
+        "y": 32
+    },
+    "states": [
+        {
+            "name": "chesteyes1",
+            "directions": 4
+        },
+        {
+            "name": "chesteyes2",
+            "directions": 4
+        },
+        {
+            "name": "chesteyes3",
+            "directions": 4
+        },
+        {
+            "name": "chesteyes4",
+            "directions": 4
+        },
+        {
+            "name": "chesteyes5",
+            "directions": 4
+        }
+    ]
+}

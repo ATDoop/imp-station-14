@@ -1,0 +1,40 @@
+- type: body
+  id: Reaper
+  name: "reaper"
+  root: torso
+  slots:
+    head:
+      part: HeadReaper
+      connections:
+      - torso
+    torso:
+      part: TorsoReaper
+      connections:
+      - right arm
+      - left arm
+      - right leg
+      - left leg
+    right arm:
+      part: RightArmReaper
+      connections:
+      - right hand
+    left arm:
+      part: LeftArmReaper
+      connections:
+      - left hand
+    right hand:
+      part: RightHandReaper
+    left hand:
+      part: LeftHandReaper
+    right leg:
+      part: RightLegReaper
+      connections:
+      - right foot
+    left leg:
+      part: LeftLegReaper
+      connections:
+      - left foot
+    right foot:
+      part: RightFootReaper
+    left foot:
+      part: LeftFootReaper
