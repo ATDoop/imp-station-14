@@ -13,3 +13,11 @@
   color: "#e36b00"
   requiredComponents:
   - Hivemind
+
+- type: collectiveMind
+  id: ReaperLink
+  name: collective-mind-reaper
+  keycode: 'r'
+  color: "#08ca95"
+  requiredTags:
+  - ReaperLink

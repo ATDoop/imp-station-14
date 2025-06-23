@@ -40,3 +40,100 @@
   - type: Tag
     tags:
     - Sidearm
+
+#Sniper
+
+- type: entity
+  name: Nuckelavee #imp
+  parent: [ BaseWeaponSniper, BaseGunWieldable, Tier3Contraband ] # imp contraband
+  id: WeaponSniperReaper
+  description: Jeez, what's this thing made from, a dead cow? #TODO: dont use this description
+  components:
+  - type: Sprite #unfortunately you can't do unshaded layers for wielded states, something to go back and do in the future
+    sprite: _Impstation/Objects/Weapons/Guns/Snipers/reaper_sniper.rsi
+    layers:
+      - state: base
+      - state: base-unshaded
+        shader: unshaded
+  - type: Clothing
+    sprite: _Impstation/Objects/Weapons/Guns/Snipers/reaper_sniper.rsi
+    clothingVisuals:
+      back:
+      - state: equipped-BACKPACK
+      - state: equipped-BACKPACK-unshaded
+        shader: unshaded
+      suitstorage:
+      - state: equipped-SUITSTORAGE
+      - state: equipped-SUITSTORAGE-unshaded
+        shader: unshaded
+  - type: GunRequiresWield
+  - type: Gun
+    fireRate: 0.4
+    selectedMode: SemiAuto
+    availableModes:
+    - SemiAuto
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/sniper.ogg
+  - type: BallisticAmmoProvider
+    whitelist:
+      tags:
+      - CartridgeAntiMateriel
+    capacity: 5
+    proto: CartridgeReaperSniper
+  - type: SpeedModifiedOnWield
+    walkModifier: 0.25
+    sprintModifier: 0.25
+  - type: CursorOffsetRequiresWield
+  - type: EyeCursorOffset
+    maxOffset: 3
+    pvsIncrease: 0.3
+  - type: ThermalVision #for the ghost role, the wielder can't use it but the ghost role can
+    isEquipment: false
+    pulseTime: 2
+    toggleAction: PulseThermalVision
+  - type: GhostRole #built in spotter
+    makeSentient: true
+    allowSpeech: true
+    allowMovement: false
+    name: ghost-role-information-nuckelavee-name
+    description: ghost-role-information-nuckelavee-description
+    rules: ghost-role-information-familiar-nuckelavee-rules
+    mindRoles:
+    - MindRoleGhostRoleFamiliar
+  - type: GhostTakeoverAvailable
+    raffle:
+      settings: short
+  - type: Examiner
+  - type: Eye
+  - type: ContentEye
+#imp edit begin; weapon melee
+  - type: MeleeWeapon
+    range: 0.8
+    attackRate: 0.4 #slower, but hits harder; bigger object to shove with
+    damage:
+      types:
+        Blunt: 4
+        Slash: 4 #ribcage is sharp!
+    soundHit:
+      path: /Audio/Effects/hit_kick.ogg
+    soundSwing:
+      path: /Audio/_Impstation/Weapons/Guns/Melee/shove_foley.ogg
+    resetOnHandSelected: true
+  - type: AltFireMelee
+    attackType: Heavy
+  - type: DamageOtherOnHit #for throwing
+    staminaCost: 15
+    damage:
+      types:
+        Blunt: 6
+        Slash: 6
+  - type: StaminaDamageOnHit
+    damage: 15 #slight stagger, but still like 7 hits to stun completely
+  - type: MeleeRequiresWield
+  - type: MeleeThrowOnHit
+    distance: 0.8
+    speed: 5
+  - type: CollectiveMind
+  - type: Tag
+    tags:
+    - ReaperLink

@@ -1,7 +1,16 @@
+# Reaper Role
+
 roles-antag-reaper-name = Reaper
 reaper-role-greeting =
     You are a reaper, sent to ensure your target dies at the correct time.
 roles-antag-reaper-objective = Maintain fate by ensuring your target dies at the correct time.
+
+# Nuckelavee (Reaper Sniper) Ghost role
+ghost-role-information-nuckelavee-name = Nuckelavee Sniper Rifle
+ghost-role-information-nuckelavee-description = A haunted sniper rifle, tasked with spotting targets for whoever holds it.
+ghost-role-information-familiar-nuckelavee-rules = You are a [color=#6495ed][bold]Familiar[/bold][/color], loyal to your wielder. Serve the interests of your master, whatever those may be.
+
+                                                  You don't remember any of your previous life, and you don't remember anything you learned as a ghost.
 
 # Names
 

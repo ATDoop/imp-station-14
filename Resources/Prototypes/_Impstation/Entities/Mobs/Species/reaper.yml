@@ -5,6 +5,10 @@
   id: BaseMobReaper
   abstract: true
   components:
+  - type: Barotrauma
+    damage:
+      types:
+        blunt: 0 # immune to space
   - type: Absorbable
   - type: Hunger
   - type: Thirst
@@ -62,6 +66,8 @@
       sprite: "Effects/creampie.rsi" #TODO: creampie reapers
       state: "creampie_human"
       visible: false
+#  - type: FloatingVisuals #this shit dont work the way i want it to FUCK!!!
+#    animationKey: anomalyfloat
   - type: Body
     prototype: Reaper
     requiredLegs: 2
@@ -103,7 +109,7 @@
     damageOverlayGroups:
       Brute:
         sprite: Mobs/Effects/brute_damage.rsi
-        color: "#75ef0a"
+        color: "#17ce5a"
   - type: Bloodstream
     bloodReagent: Blood #TODO: reaper blood
   - type: Inventory
@@ -119,7 +125,7 @@
     tags:
     - CanPilot
     - DoorBumpOpener
-    - AnomalyHost
+    - ReaperLink
 
 - type: entity
   parent: BaseSpeciesDummy

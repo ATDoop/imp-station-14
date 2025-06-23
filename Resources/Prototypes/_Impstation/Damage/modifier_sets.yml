@@ -24,11 +24,13 @@
 - type: damageModifierSet
   id: Reaper
   coefficients:
-    Holy: 3
-    Shock: 2
-    Blunt: 0.5
-    Piercing: 0.5
-    Slash: 0.5
-  flatReductions: #they're tanky to conventional attacks
-    Cold: 2
-    Poison: 5
+    Blunt: 0.9
+    Slash: 1.1
+    Piercing: 1
+    Heat: 1.15
+    Cold: 0.0
+    Poison: 0.0
+    Radiation: 0.0
+    Asphyxiation: 0.0
+    Bloodloss: 0.0
+    Cellular: 0.0

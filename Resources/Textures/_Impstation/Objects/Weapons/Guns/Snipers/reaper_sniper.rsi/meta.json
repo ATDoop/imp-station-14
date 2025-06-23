@@ -1,0 +1,72 @@
+{
+    "version": 1,
+    "license": "CC-BY-SA-3.0",
+    "copyright": "by atdoop (github) for impstation",
+    "MetaAtlas": false,
+    "size": {
+        "x": 64,
+        "y": 64
+    },
+    "states": [
+        {
+            "name": "base"
+        },
+        {
+            "name": "base-unshaded"
+        },
+        {
+            "name": "bolt-open"
+        },
+        {
+            "name": "bolt-open-unshaded"
+        },
+        {
+            "name": "inhand-left",
+            "directions": 4
+        },
+        {
+            "name": "inhand-right",
+            "directions": 4
+        },
+        {
+            "name": "inhand-left-unshaded",
+            "directions": 4
+        },
+        {
+            "name": "inhand-right-unshaded",
+            "directions": 4
+        },
+        {
+            "name": "wielded-inhand-left",
+            "directions": 4
+        },
+        {
+            "name": "wielded-inhand-right",
+            "directions": 4
+        },
+        {
+            "name": "wielded-inhand-left-unshaded",
+            "directions": 4
+        },
+        {
+            "name": "wielded-inhand-right-unshaded",
+            "directions": 4
+        },
+        {
+            "name": "equipped-BACKPACK",
+            "directions": 4
+        },
+        {
+            "name": "equipped-SUITSTORAGE",
+            "directions": 4
+        },
+        {
+            "name": "equipped-BACKPACK-unshaded",
+            "directions": 4
+        },
+        {
+            "name": "equipped-SUITSTORAGE-unshaded",
+            "directions": 4
+        }
+    ]
+}

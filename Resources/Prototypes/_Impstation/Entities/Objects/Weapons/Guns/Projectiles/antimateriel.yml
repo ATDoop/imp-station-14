@@ -1,0 +1,23 @@
+- type: entity
+  categories: [ HideSpawnMenu ]
+  parent: BaseBullet
+  id: BulletReaperSniper
+  name: soullet (.60 anti-mortal)
+  components:
+  - type: Sprite
+    noRot: false
+    sprite: /Textures/_Impstation/Objects/Weapons/Guns/Projectiles/kineticprojectiles.rsi
+    layers:
+    - state: uranium
+      shader: unshaded
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 25
+        Cold: 50
+        Structural: 226
+    penetrationThreshold: 360
+    penetrationDamageTypeRequirement:
+    - Structural
+  - type: StaminaDamageOnCollide
+    damage: 60
