@@ -91,7 +91,7 @@
         !type:EyeColoring
   sprites:
   - sprite: _Impstation/Mobs/Customization/Reaper/eyes.rsi
-    state: eyes1
+    state: reaper_eyes1
   shader: unshaded
 
 - type: marking
@@ -106,7 +106,7 @@
         !type:EyeColoring
   sprites:
   - sprite: _Impstation/Mobs/Customization/Reaper/eyes.rsi
-    state: eyes2
+    state: reaper_eyes2
   shader: unshaded
 
 - type: marking
@@ -121,7 +121,7 @@
         !type:EyeColoring
   sprites:
   - sprite: _Impstation/Mobs/Customization/Reaper/eyes.rsi
-    state: eyes3
+    state: reaper_eyes3
   shader: unshaded
 
 - type: marking
@@ -136,7 +136,7 @@
         !type:EyeColoring
   sprites:
   - sprite: _Impstation/Mobs/Customization/Reaper/eyes.rsi
-    state: eyes4
+    state: reaper_eyes4
   shader: unshaded
 
 - type: marking
@@ -151,7 +151,7 @@
         !type:EyeColoring
   sprites:
   - sprite: _Impstation/Mobs/Customization/Reaper/eyes.rsi
-    state: eyes5
+    state: reaper_eyes5
   shader: unshaded
 
 - type: marking
@@ -166,7 +166,7 @@
         !type:EyeColoring
   sprites:
   - sprite: _Impstation/Mobs/Customization/Reaper/eyes.rsi
-    state: eyes6
+    state: reaper_eyes6
   shader: unshaded
 
 - type: marking
@@ -182,7 +182,7 @@
         color: "#FFFFFF"
   sprites:
   - sprite: _Impstation/Mobs/Customization/Reaper/eyes.rsi
-    state: eyes7
+    state: reaper_eyes7
   shader: unshaded
 
 - type: marking
@@ -197,7 +197,7 @@
         !type:EyeColoring
   sprites:
   - sprite: _Impstation/Mobs/Customization/Reaper/eyes.rsi
-    state: eyes8
+    state: reaper_eyes8
   shader: unshaded
 
 - type: marking
@@ -212,7 +212,7 @@
         !type:EyeColoring
   sprites:
   - sprite: _Impstation/Mobs/Customization/Reaper/eyes.rsi
-    state: eyes9
+    state: reaper_eyes9
   shader: unshaded
 
 - type: marking
@@ -227,7 +227,7 @@
         !type:EyeColoring
   sprites:
   - sprite: _Impstation/Mobs/Customization/Reaper/eyes.rsi
-    state: eyes10
+    state: reaper_eyes10
   shader: unshaded
 
 - type: marking
@@ -242,7 +242,7 @@
         !type:EyeColoring
   sprites:
   - sprite: _Impstation/Mobs/Customization/Reaper/eyes.rsi
-    state: eyes11
+    state: reaper_eyes11
   shader: unshaded
 
 - type: marking
@@ -258,8 +258,24 @@
         color: "#FFFFFF"
   sprites:
   - sprite: _Impstation/Mobs/Customization/Reaper/eyes.rsi
-    state: eyes12
+    state: reaper_eyes12
   shader: unshaded
+
+- type: marking
+  id: ReaperEyesSymbol
+  bodyPart: Eyes
+  markingCategory: Eyes
+  speciesRestriction: [ Reaper ]
+  forcedColoring: true
+  coloring:
+    default:
+      type:
+        !type:EyeColoring
+  sprites:
+  - sprite: _Impstation/Mobs/Customization/Reaper/eyes.rsi
+    state: reaper_eyes13
+  shader: unshaded
+
 # RArm
 
 # LArm

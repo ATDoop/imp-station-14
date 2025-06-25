@@ -9,51 +9,55 @@
     },
     "states": [
         {
-            "name": "eyes1",
+            "name": "reaper_eyes1",
             "directions": 4
         },
         {
-            "name": "eyes2",
+            "name": "reaper_eyes2",
             "directions": 4
         },
         {
-            "name": "eyes3",
+            "name": "reaper_eyes3",
             "directions": 4
         },
         {
-            "name": "eyes4",
+            "name": "reaper_eyes4",
             "directions": 4
         },
         {
-            "name": "eyes5",
+            "name": "reaper_eyes5",
             "directions": 4
         },
         {
-            "name": "eyes6",
+            "name": "reaper_eyes6",
             "directions": 4
         },
         {
-            "name": "eyes7",
+            "name": "reaper_eyes7",
             "directions": 4
         },
         {
-            "name": "eyes8",
+            "name": "reaper_eyes8",
             "directions": 4
         },
         {
-            "name": "eyes9",
+            "name": "reaper_eyes9",
             "directions": 4
         },
         {
-            "name": "eyes10",
+            "name": "reaper_eyes10",
             "directions": 4
         },
         {
-            "name": "eyes11",
+            "name": "reaper_eyes11",
             "directions": 4
         },
         {
-            "name": "eyes12",
+            "name": "reaper_eyes12",
+            "directions": 4
+        },
+        {
+            "name": "reaper_eyes13",
             "directions": 4
         }
     ]
