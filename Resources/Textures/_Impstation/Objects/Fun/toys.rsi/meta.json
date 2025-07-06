@@ -198,6 +198,21 @@
         },
         {
             "name": "yarn-noodles"
+        },
+        {
+            "name": "plushie_goldbug"
+        },
+        {
+            "name": "plushie_goldbug-inhand-left",
+            "directions": 4
+        },
+        {
+            "name": "plushie_goldbug-inhand-right",
+            "directions": 4
+        },
+        {
+            "name": "goldbug-equipped-HELMET",
+            "directions": 4
         }
     ]
 }

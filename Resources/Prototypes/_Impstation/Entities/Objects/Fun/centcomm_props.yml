@@ -1,0 +1,195 @@
+#Doop's Stuff
+
+- type: entity
+  id: WeirdSymbol
+  parent: BaseStructure
+  suffix: CentComm Prop
+  categories: [ HideSpawnMenu, DoNotMap ]
+  name: weird lamp
+  description: Huh, wonder what that is? Probably just a fancy lamp.
+  components:
+    - type: Sprite
+      sprite: _Impstation/Objects/Fun/leechsymbol.rsi
+      state: symbol
+      noRot: true
+    - type: Reflect
+      reflectProb: 0.5
+      reflects:
+      - Energy
+      spread: 75
+    - type: Physics
+      bodyType: Static
+    - type: PointLight
+      radius: 1.5
+      energy: 2
+      color: "#91ff00"
+
+- type: entity
+  parent: PlushieBug
+  id: PlushieGoldBug
+  suffix: CentComm Prop
+  categories: [ HideSpawnMenu, DoNotMap ]
+  name: golden bug plushie
+  description: You need it. You need it more than anything.
+  components:
+  - type: Sprite
+    sprite: _Impstation/Objects/Fun/toys.rsi
+    state: plushie_goldbug
+  - type: MeleeWeapon
+    wideAnimationRotation: -135
+    attackRate: 1
+    damage:
+      types:
+        Blune: 10
+    soundHit:
+      path: /Audio/Voice/Arachnid/arachnid_scream.ogg
+    animation: WeaponArcBite
+  - type: LandAtCursor
+  - type: DamageOtherOnHit
+    ignoreResistances: true
+    damage:
+      types:
+        Blunt: 10
+    staminaCost: 5
+  - type: Item
+    sprite: _Impstation/Objects/Fun/toys.rsi
+    inhandVisuals:
+      left:
+        - state: plushie_goldbug-inhand-left
+      right:
+        - state: plushie_goldbug-inhand-right
+  - type: Food
+    requiresSpecialDigestion: false
+    useSound:
+      path: /Audio/Voice/Arachnid/arachnid_scream.ogg
+  - type: Absorbable #delicious
+    biomassRestored: 0.1
+  - type: FlavorProfile
+    flavors:
+      - whimsy
+  - type: Extractable
+    grindableSolutionName: bugblood
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 10
+        reagents:
+        - ReagentId: Gold
+          Quantity: 5
+        - ReagentId: HeartbreakerToxin
+          Quantity: 5
+      bugblood:
+        maxVol: 10
+        reagents:
+        - ReagentId: CopperBlood
+          Quantity: 10
+  - type: Clothing
+    quickEquip: false
+    sprite: /Uploaded/goldbug.rsi
+    equippedPrefix: goldbug
+    slots:
+    - HEAD
+    clothingVisuals:
+      head:
+      - state: goldbug-equipped-HELMET
+        offset: "0, 0.06"
+
+- type: entity
+  parent: [ClothingOuterHardsuitBase, Tier3Contraband]
+  id: ClothingOuterHardsuitEmpire
+  suffix: CentComm Prop
+  categories: [ HideSpawnMenu, DoNotMap ]
+  name: blackdyrt empire hardsuit
+  description: From somewhere very far away.
+  components:
+  - type: Sprite
+    sprite: _Impstation/Clothing/OuterClothing/Hardsuits/empirehardsuit.rsi
+    layers:
+    - state: icon
+    - state: icon-unshaded
+      shader: unshaded
+  - type: Clothing
+    sprite: _Impstation/Clothing/OuterClothing/Hardsuits/empirehardsuit.rsi
+    clothingVisuals:
+      outerClothing:
+      - state: equipped-OUTERCLOTHING
+      - state: equipped-OUTERCLOTHING-unshaded
+        shader: unshaded
+  - type: PressureProtection
+    highPressureMultiplier: 0.02
+    lowPressureMultiplier: 1000
+  - type: TemperatureProtection
+    heatingCoefficient: 0.001
+    coolingCoefficient: 0.001
+  - type: ExplosionResistance
+    damageCoefficient: 0.2
+  - type: FireProtection
+    reduction: 0.8
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.6
+        Slash: 0.6
+        Piercing: 0.6
+        Heat: 0.2
+        Radiation: 0.01
+        Caustic: 0.5
+  - type: Item
+    size: Huge
+  - type: ClothingSpeedModifier
+    walkModifier: 1.0
+    sprintModifier: 0.9
+  - type: HeldSpeedModifier
+  - type: ToggleableClothing
+    clothingPrototype: ClothingHeadHelmetHardsuitEmpire
+
+- type: entity
+  parent: [ ClothingHeadHardsuitBase, ClothingHeadSuitWithLightBase ]
+  id: ClothingHeadHelmetHardsuitEmpire
+  suffix: CentComm Prop
+  categories: [ HideSpawnMenu, DoNotMap ]
+  name: blackdyrt empire helmet
+  description: It's a little... cute?
+  components:
+  - type: Sprite
+    sprite: _Impstation/Clothing/OuterClothing/Hardsuits/empirehardsuit.rsi #imp edit
+    layers:
+    - state: icon-helmet
+    - state: icon-helmet-unshaded
+      shader: unshaded
+    - state: icon-helmet-light
+      visible: false
+      shader: unshaded
+      map: [ "light" ]
+  - type: Clothing
+    sprite: _Impstation/Clothing/OuterClothing/Hardsuits/empirehardsuit.rsi #imp edit
+    clothingVisuals:
+      head:
+      - state: equipped-HELMET
+        offset: "0, 0.187"
+      - state: equipped-HELMET-unshaded
+        shader: unshaded
+        offset: "0, 0.187"
+  - type: ToggleableLightVisuals
+    clothingVisuals:
+      head:
+      - state: equipped-HELMET-light
+        shader: unshaded
+        offset: "0, 0.187"
+  - type: PointLight
+    color: "#ff003b"
+  - type: PressureProtection
+    highPressureMultiplier: 0.08
+    lowPressureMultiplier: 1000
+  - type: TemperatureProtection
+    heatingCoefficient: 0.005
+    coolingCoefficient: 0.005
+  - type: FireProtection
+    reduction: 0.2
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.9
+        Slash: 0.9
+        Piercing: 0.9
+        Heat: 0.9
