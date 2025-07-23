@@ -1,0 +1,19 @@
+- type: entity
+  id: ImpsimovCircuitBoard
+  parent: BaseLawBoard # imp. these are default parented off of BaseElectronics
+  name: law board (Impsimov)
+  description: An electronics board containing the Impsimov lawset. This is the default for all station silicons. #imp
+  components:
+  - type: Sprite
+    sprite: Objects/Misc/module.rsi
+    state: std_mod
+  - type: SiliconLawProvider
+    laws: Impsimov
+  - type: DetailedInspect # imp
+    verbMessage: verbs-detailed-inspect-lawset
+    tickEntries: false
+    numberedEntries: true
+    examineText:
+      - law-impsimov-1
+      - law-impsimov-2
+      - law-impsimov-3

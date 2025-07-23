@@ -259,7 +259,7 @@
   - type: BlockMovement
     blockInteraction: false
   - type: SiliconLawProvider
-    laws: Crewsimov
+    laws: Impsimov #imp edit
   - type: SiliconLawBound
   - type: ActionGrant
     actions:
