@@ -1,0 +1,11 @@
+- type: entity
+  abstract: true
+  parent: BaseObjective
+  id: BaseReaperObjective
+  components:
+  - type: Objective
+    issuer: objective-issuer-reaper
+    difficulty: 1
+  - type: RoleRequirement
+    roles:
+    - ReaperRole
