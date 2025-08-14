@@ -3,3 +3,27 @@
   name: Urist McScary
   parent: BaseMobReaper
   id: MobReaper
+
+- type: entity
+  name: reaper
+  id: MobReaperBaseGhostrole
+  parent: BaseMobReaper
+  description: Nothing more than an empty robe. #REAPER TODO: something else maybe
+  components:
+  - type: RandomMetadata
+    nameSegments:
+    - NamesReaperFirst
+    - NamesReaperLast
+    nameFormat: name-format-standard
+  - type: RandomHumanoidAppearance
+    randomizeName: false
+    gender: neuter
+  - type: GhostRole
+    name: ghost-role-information-reaper-name
+    description: ghost-role-information-reaper-description
+    rules: ghost-role-information-antagonist-rules
+    raffle:
+      settings: default
+    mindRoles:
+    - MindRoleReaper
+  - type: GhostTakeoverAvailable

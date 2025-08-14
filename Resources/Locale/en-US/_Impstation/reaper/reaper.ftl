@@ -1,9 +1,15 @@
-# Reaper Role
+# Reaper Antag/Ghost Role Stuff
+ghost-role-information-reaper-name = Reaper
+ghost-role-information-reaper-description = A Reaper, sent to ensure that their mark dies on time.
 
 roles-antag-reaper-name = Reaper
 reaper-role-greeting =
-    You are a reaper, sent to ensure your target dies at the correct time.
+    You are a Reaper, sent to ensure your target dies at the correct time.
 roles-antag-reaper-objective = Maintain fate by ensuring your target dies at the correct time.
+
+objective-issuer-reaper = [color=#08ca95]Paranoosphere Council[/color]
+
+reaper-roundend-name = Reaper
 
 # Nuckelavee (Reaper Sniper) Ghost role
 ghost-role-information-nuckelavee-name = Nuckelavee Sniper Rifle

@@ -1,7 +1,7 @@
 - type: antag
   id: Reaper
   name: roles-antag-reaper-name
-  antagonist: false
+  antagonist: true
   setPreference: false
   playTimeTracker: AntagReaper # imp
   objective: roles-antag-reaper-objective
@@ -9,7 +9,7 @@
   - !type:OverallPlaytimeRequirement # Imp
     time: 3600 # 1h
 
-#TODO: Reaper satchel, shop, radio? etc
+#REAPER TODO: Reaper satchel, shop, radio? etc
 #- type: startingGear
 #  id: ReaperGear
 

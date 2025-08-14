@@ -131,3 +131,53 @@
       - type: NpcFactionMember
         factions:
         - Syndicate
+
+# Reaper
+# REAPER TODO: Find a way to test this
+- type: entity
+  parent: BaseGameRule
+  id: ReaperSpawn
+  components:
+  - type: StationEvent
+    weight: 7
+    duration: null
+    earliestStart: 25
+    reoccurrenceDelay: 20
+    minimumPlayers: 15
+  - type: RuleGrids
+  - type: LoadMapRule
+    preloadedGrid: ReaperShip
+  - type: AntagSpawner
+    prototype: MobReaperBaseGhostrole
+  - type: AntagObjectives
+    objectives:
+    - ReaperKillRandomPersonObjective
+    - ReaperSurviveObjective
+  - type: AntagSelection
+    agentName: reaper-roundend-name
+    definitions:
+    - spawnerPrototype: SpawnPointGhostReaper
+      min: 1
+      max: 1
+      pickPlayer: false
+#      startingGear: ReaperGear
+#      roleLoadout:
+#      - RoleSurvivalEVA
+      briefing:
+        text: reaper-role-greeting
+        color: Orange
+        # TODO: Custom greeting sound
+        # sound: /Audio/Misc/ninja_greeting.ogg
+      mindRoles:
+      - MindRoleReaper
+      components:
+      - type: RandomMetadata
+        nameSegments:
+        - NamesReaperFirst
+        - NamesReaperLast
+        nameFormat: name-format-standard
+      - type: HumanoidAppearance
+        species: Reaper
+      - type: RandomHumanoidAppearance
+        randomizeName: false
+        gender: neuter

@@ -1,0 +1,4 @@
+- type: preloadedGrid
+  id: ReaperShip
+  path: /Maps/_Impstation/Shuttles/ShuttleEvent/reapership.yml
+  copies: 1

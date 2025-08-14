@@ -48,3 +48,31 @@
     rules: ghost-role-information-infiltrator-rules
   - type: GhostRoleMobSpawner
     prototype: MobHumanSyndicateInfiltrator
+
+#REAPER TODO: Is this stuff even necessary?
+- type: entity
+  categories: [ HideSpawnMenu, Spawner ]
+  parent: BaseAntagSpawner
+  id: SpawnPointGhostReaper
+  components:
+  - type: GhostRole
+    name: "Reaper"
+    description: "Ensure your mark dies on time."
+    rules: ghost-role-information-antagonist-rules
+    mindRoles:
+    - MindRoleReaper
+    raffle:
+      settings: default
+
+- type: entity
+  id: SpawnPointReaper
+  parent: MarkerBase
+  name: reaper
+  components:
+  - type: SpawnPoint
+  - type: Sprite
+    layers:
+    - state: green
+    - sprite: _Impstation/Mobs/Species/Reaper/parts.rsi
+      state: full
+

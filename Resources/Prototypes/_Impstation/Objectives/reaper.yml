@@ -9,3 +9,28 @@
   - type: RoleRequirement
     roles:
     - ReaperRole
+
+- type: entity
+  parent: [BaseKillObjective, BaseReaperObjective]
+  id: ReaperKillRandomPersonObjective
+  description: Their time is up. Clock them out and make sure it happens as ordained. #REAPER TODO: Make this better
+  components:
+  - type: Objective
+    difficulty: 1
+    unique: false
+  - type: TargetObjective
+    title: objective-condition-maroon-person-title #REAPER TODO: better objective
+  - type: PickRandomPerson
+  - type: KillPersonCondition
+    requireMaroon: true
+
+- type: entity
+  parent: [BaseReaperObjective, BaseSurviveObjective]
+  id: ReaperSurviveObjective
+  name: Survive
+  description: Reapers are a limited resource. Protect your unlife.
+  components:
+  - type: Objective
+    icon:
+      sprite: Clothing/Eyes/Glasses/sunglasses.rsi
+      state: icon

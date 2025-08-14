@@ -84,9 +84,9 @@
     walkModifier: 0.25
     sprintModifier: 0.25
   - type: CursorOffsetRequiresWield
-  - type: EyeCursorOffset
-    maxOffset: 3
-    pvsIncrease: 0.3
+  - type: EyeCursorOffset #more offset than lindwyrm
+    maxOffset: 5
+    pvsIncrease: 0.5
   - type: ThermalVision #for the ghost role, the wielder can't use it but the ghost role can
     isEquipment: false
     pulseTime: 2

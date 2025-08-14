@@ -14,6 +14,8 @@
   - type: Thirst
   - type: Respirator
     minSaturation: 5.0 #they don't need to breathe
+#  - type: ThavenMoods
+#    FollowsSharedMoods: false
   - type: Icon
     sprite: _Impstation/Mobs/Species/Reaper/parts.rsi
     state: full
@@ -63,8 +65,8 @@
       state: body-overlay-2
       visible: false
     - map: [ "clownedon" ]
-      sprite: "Effects/creampie.rsi" #TODO: creampie reapers
-      state: "creampie_human"
+      sprite: "Effects/creampie.rsi"
+      state: "creampie_reaper"
       visible: false
 #  - type: FloatingVisuals #this shit dont work the way i want it to FUCK!!!
 #    animationKey: anomalyfloat
@@ -97,7 +99,7 @@
         - MobMask
         layer:
         - MobLayer
-  - type: Vocal #TODO: reaper sounds
+  - type: Vocal #REAPER TODO: reaper sounds
     sounds:
       Male: Skeleton
       Female: Skeleton
@@ -111,14 +113,14 @@
         sprite: Mobs/Effects/brute_damage.rsi
         color: "#17ce5a"
   - type: Bloodstream
-    bloodReagent: Blood #TODO: reaper blood
+    bloodReagent: Blood #REAPER TODO: reaper blood
   - type: Inventory
     speciesId: reaper
     templateId: reaper
   - type: Speech
     speechSounds: Alto
   - type: TypingIndicator
-    proto: guardian #TODO: reaper typing indicator
+    proto: guardian #REAPER TODO: reaper typing indicator
   - type: HumanoidAppearance
     species: Reaper
   - type: Tag
@@ -184,6 +186,6 @@
       state: body-overlay-2
       visible: false
     - map: [ "clownedon" ]
-      sprite: "Effects/creampie.rsi" #TODO: creampie reapers
-      state: "creampie_human"
+      sprite: "Effects/creampie.rsi"
+      state: "creampie_reaper"
       visible: false

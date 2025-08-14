@@ -37,3 +37,15 @@
   components:
   - type: MindRole
     subtype: role-subtype-traitor
+
+# Reaper
+- type: entity
+  parent: BaseMindRoleAntag
+  id: MindRoleReaper
+  name: Reaper Role
+  components:
+  - type: MindRole
+    antag: true
+    antagPrototype: Reaper
+    roleType: SoloAntagonist
+  - type: ReaperRole
