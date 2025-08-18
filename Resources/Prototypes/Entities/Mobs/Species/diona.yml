@@ -115,7 +115,18 @@
   - type: Inventory
     templateId: diona
     speciesId: diona #imp
+    displacements: #imp edit
+      gloves:
+        sizeMaps:
+          32:
+            sprite: _Impstation/Mobs/Species/Diona/displacement.rsi
+            state: hands
     femaleDisplacements:
+      gloves: #imp edit
+        sizeMaps:
+          32:
+            sprite: _Impstation/Mobs/Species/Diona/displacement.rsi
+            state: hands
       jumpsuit:
         sizeMaps:
           32:
