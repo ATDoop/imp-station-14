@@ -16,7 +16,7 @@
     #imp edit end,
   startingGear: LawyerGear
   icon: "JobIconLawyer"
-  supervisors: job-supervisors-hop
+  supervisors: job-supervisors-nba #imp edit
   access:
   # - Service imp
   - Lawyer
