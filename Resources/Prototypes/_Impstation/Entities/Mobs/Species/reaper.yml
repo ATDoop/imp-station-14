@@ -111,9 +111,9 @@
     damageOverlayGroups:
       Brute:
         sprite: Mobs/Effects/brute_damage.rsi
-        color: "#17ce5a"
+        color: "#72ef9f"
   - type: Bloodstream
-    bloodReagent: Blood #REAPER TODO: reaper blood
+    bloodReagent: ReaperBlood 
   - type: Inventory
     speciesId: reaper
     templateId: reaper
