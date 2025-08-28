@@ -2,6 +2,7 @@ flavor-base-kingsoda = like you're a champion
 flavor-base-drinkdrink = like dogshit
 flavor-base-unholy = unholy
 flavor-base-evil = evil
+flavor-base-ectoplasm = ghastly
 
 flavor-complex-raktaccino = fantastically bitter
 flavor-complex-moscowmule = like a kick in the teeth

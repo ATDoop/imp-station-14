@@ -52,3 +52,6 @@ reaper-last-2 = Bells
 reaper-last-3 = Hours
 reaper-last-4 = Minutes
 reaper-last-5 = Seconds
+
+#Teleport computer
+teleportation-console-window-title = Teleport Console
