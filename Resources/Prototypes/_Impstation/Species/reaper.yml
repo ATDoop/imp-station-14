@@ -11,9 +11,11 @@
   maleFirstNames: NamesReaperFirst
   femaleFirstNames: NamesReaperFirst
   lastNames: NamesReaperLast
-  youngAge: 1 
-  oldAge: 2 
-  ancientAge: 3 #all reapers are ancient
+  minAge: 1
+  youngAge: 1
+  oldAge: 1
+  ancientAge: 1 #all reapers are ancient
+  maxAge: 999
 
 - type: speciesBaseSprites
   id: MobReaperSprites

@@ -10,7 +10,7 @@
     energy: 2
     radius: 10
     softness: 1
-    offset: "0, -0.5"
+    offset: "0, 0"
   - type: Sprite
     layers:
       - state: green

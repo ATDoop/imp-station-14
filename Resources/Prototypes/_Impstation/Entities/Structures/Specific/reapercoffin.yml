@@ -37,4 +37,4 @@
   - type: ItemSlots
   - type: StorageFill
     contents:
-      - id: MobReaperBaseGhostrole
+      - id: MobReaperGhostrole

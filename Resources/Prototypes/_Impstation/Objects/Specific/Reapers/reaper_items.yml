@@ -100,9 +100,9 @@
     rules: ghost-role-information-familiar-nuckelavee-rules
     mindRoles:
     - MindRoleGhostRoleFamiliar
-  - type: GhostTakeoverAvailable
     raffle:
       settings: short
+  - type: GhostTakeoverAvailable
   - type: Examiner
   - type: Eye
   - type: ContentEye

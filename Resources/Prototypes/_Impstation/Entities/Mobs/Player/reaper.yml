@@ -6,7 +6,7 @@
 
 - type: entity
   name: reaper
-  id: MobReaperBaseGhostrole
+  id: MobReaperGhostrole
   parent: BaseMobReaper
   description: Nothing more than an empty robe. #REAPER TODO: something else maybe
   components:

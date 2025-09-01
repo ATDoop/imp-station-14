@@ -164,7 +164,7 @@
   - type: LoadMapRule
     preloadedGrid: ReaperShip
   - type: AntagSpawner
-    prototype: MobReaperBaseGhostrole
+    prototype: MobReaperGhostrole
   - type: AntagObjectives
     objectives:
     - ReaperKillRandomPersonObjective
