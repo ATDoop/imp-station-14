@@ -59,3 +59,18 @@
     forced: true
     revertOnCrit: false
     revertOnDeath: false
+
+#Reaper Polymorphs
+- type: polymorph #REAPER TODO: This
+  id: ReaperJaunt
+  configuration:
+    entity: ReaperSoul
+    transferName: true
+    inventory: None
+    forced: true
+    revertOnDeath: true
+    revertOnCrit: true
+    allowRepeatedMorphs: false
+    polymorphSound: /Audio/Magic/ethereal_enter.ogg
+    exitPolymorphSound: /Audio/Magic/ethereal_exit.ogg
+    duration: 15

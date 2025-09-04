@@ -1,0 +1,15 @@
+- type: entity
+  parent: BaseActionPolymorph
+  id: ActionPolymorphReaperJaunt
+  name: Soul Jaunt
+  description: Revert to your soul form.
+  components:
+  - type: Magic
+  - type: Action
+    useDelay: 30
+    icon:
+      sprite: Objects/Magic/magicactions.rsi
+      state: jaunt
+  - type: InstantAction
+    event: !type:PolymorphActionEvent
+      protoId: ReaperJaunt

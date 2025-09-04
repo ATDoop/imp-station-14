@@ -1,0 +1,18 @@
+- type: entity
+  name: reaper soul
+  parent: BaseMobJaunt
+  id: ReaperSoul
+  suffix: Reaper
+  components:
+  - type: Sprite
+    sprite: _Impstation/Mobs/Species/Reaper/reapersoul.rsi
+    layers:
+    - state: reaper_soul
+    - state: reaper_soul_eyes
+      shader: unshaded
+    noRot: true
+    overrideContainerOcclusion: true
+    drawdepth: Ghosts
+  - type: MovementSpeedModifier
+    baseSprintSpeed: 6
+    baseWalkSpeed: 4
