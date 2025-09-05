@@ -12,7 +12,7 @@
   keycode: 'h'
   color: "#e36b00"
   requiredComponents:
-  - Hivemind
+  - GoobHivemind
 
 - type: collectiveMind
   id: ReaperLink
