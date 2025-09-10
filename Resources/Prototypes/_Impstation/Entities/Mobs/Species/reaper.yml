@@ -9,7 +9,7 @@
     damage:
       types:
         blunt: 0 # immune to space
-  - type: Absorbable
+  - type: GoobAbsorbable
   - type: Hunger
   - type: Thirst
   - type: Respirator
