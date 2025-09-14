@@ -2,7 +2,7 @@
   id: StatueReaper
   parent: BaseStructure
   name: judgemental statue
-  description: Even our memories are cold and lifeless now.
+  description: Even our memories are nothing more than lifeless facsimiles of what we once were.
   components:
   - type: Sprite
     noRot: true

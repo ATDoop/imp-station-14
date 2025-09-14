@@ -272,8 +272,8 @@
 - type: entity
   parent: MarkerBase
   id: WallInvisiblePermanent #use this in special, non-station, non-wreck or debris maps only please!! 
-  name: invisible wall
-  suffix: Permanent
+  name: permanent invisible wall
+  suffix: Mapping
   components:
   - type: Tag
     tags:
@@ -296,4 +296,4 @@
       - sprite: Structures/Walls/solid.rsi
         state: full
       - sprite: Markers/cross.rsi
-      - state: green
+      - state: blue

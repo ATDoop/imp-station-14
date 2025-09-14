@@ -7,10 +7,10 @@
   components:
   - type: Clickable
   - type: Sprite
-    sprite: _Impstation/Structures/reapercatwalk.rsi
+    sprite: _Impstation/Structures/Specific/Reaper/reapercatwalk.rsi
     drawdepth: FloorTiles
   - type: Icon
-    sprite: _Impstation/Structures/reapercatwalk.rsi
+    sprite: _Impstation/Structures/Specific/Reaper/reapercatwalk.rsi
     state: reapercatwalk_preview
   - type: Transform
     anchored: true
