@@ -80,11 +80,16 @@
       amount: 2
   - type: ZombieImmune
   - type: TransferMindOnGib
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      -1: Critical
+      299: Dead
   - type: Destructible
     thresholds:
     - trigger:
         !type:DamageTrigger
-        damage: 150
+        damage: 300
       behaviors:
       - !type:GibBehavior { }
   - type: Fixtures
@@ -105,7 +110,7 @@
       Female: Skeleton
       Unsexed: Skeleton
   - type: Damageable
-    damageContainer: Biological
+    damageContainer: BiologicalMetaphysical
     damageModifierSet: Reaper
   - type: DamageVisuals
     damageOverlayGroups:
