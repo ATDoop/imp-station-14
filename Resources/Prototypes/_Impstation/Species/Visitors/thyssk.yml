@@ -1,0 +1,169 @@
+- type: species
+  id: Thyssk
+  name: species-name-thyssk
+  roundStart: true
+  randomViable: true
+  randomChance: 0.33
+  prototype: MobThyssk
+  sprites: MobThysskSprites
+  defaultSkinTone: "#242433"
+  markingLimits: MobThysskMarkingLimits
+  dollPrototype: MobThysskDummy
+  skinColoration: AnomalocaridToned
+  maleFirstNames: NamesAnomalocaridFirst
+  femaleFirstNames: NamesAnomalocaridFirst
+  lastNames: NamesAnomalocaridLast
+  sexes:
+  - Male
+  - Female
+  - Unsexed
+
+- type: speciesBaseSprites
+  id: MobThysskSprites
+  sprites:
+    Eyes: MobThysskEyes
+    Head: MobThysskHead
+    HeadTop: MobHumanoidAnyMarking
+    HeadSide: MobHumanoidAnyMarking
+    Tail: MobHumanoidAnyMarking
+    UndergarmentBottom: MobHumanoidAnyMarking
+    UndergarmentTop: MobHumanoidAnyMarking
+    Chest: MobThysskTorso
+    LArm: MobThysskLArm
+    RArm: MobThysskRArm
+    LHand: MobThysskLHand
+    RHand: MobThysskRHand
+    LLeg: MobThysskLLeg
+    RLeg: MobThysskRLeg
+    LFoot: MobThysskLFoot
+    RFoot: MobThysskRFoot
+
+- type: markingPoints
+  id: MobThysskMarkingLimits
+  onlyWhitelisted: true
+  points:
+    HeadTop:
+      points: 1
+      required: false
+    HeadSide:
+      points: 1
+      required: false
+    Eyes:
+      points: 1
+      required: true
+      defaultMarkings: [ ThysskEyesGlow ]
+    Chest:
+      points: 1
+      required: false
+    Tail:
+      points: 1
+      required: false
+    UndergarmentTop:
+      points: 1
+      required: false
+    UndergarmentBottom:
+      points: 1
+      required: false
+    Arms:
+      points: 4
+      required: false
+    Overlay:
+      points: 3
+      required: false
+    Snout:
+      points: 1
+      required: false
+    Legs:
+      points: 2
+      required: false
+
+- type: humanoidBaseSprite
+  id: MobThysskEyes
+  baseSprite:
+    sprite: _Impstation/Mobs/Species/Visitors/Thyssk/parts.rsi
+    state: eyes
+
+- type: humanoidBaseSprite
+  id: MobThysskHead
+  baseSprite:
+    sprite: _Impstation/Mobs/Species/Visitors/Thyssk/parts.rsi
+    state: head
+
+- type: humanoidBaseSprite
+  id: MobThysskHeadMale
+  baseSprite:
+    sprite: _Impstation/Mobs/Species/Visitors/Thyssk/parts.rsi
+    state: head
+
+- type: humanoidBaseSprite
+  id: MobThysskHeadFemale
+  baseSprite:
+    sprite: _Impstation/Mobs/Species/Visitors/Thyssk/parts.rsi
+    state: head
+
+- type: humanoidBaseSprite
+  id: MobThysskTorso
+  baseSprite:
+    sprite: _Impstation/Mobs/Species/Visitors/Thyssk/parts.rsi
+    state: torso
+
+- type: humanoidBaseSprite
+  id: MobThysskTorsoMale
+  baseSprite:
+    sprite: _Impstation/Mobs/Species/Visitors/Thyssk/parts.rsi
+    state: torso
+
+- type: humanoidBaseSprite
+  id: MobThysskTorsoFemale
+  baseSprite:
+    sprite: _Impstation/Mobs/Species/Visitors/Thyssk/parts.rsi
+    state: torso
+
+
+- type: humanoidBaseSprite
+  id: MobThysskLLeg
+  baseSprite:
+    sprite: _Impstation/Mobs/Species/Visitors/Thyssk/parts.rsi
+    state: l_leg
+
+- type: humanoidBaseSprite
+  id: MobThysskLHand
+  baseSprite:
+    sprite: _Impstation/Mobs/Species/Visitors/Thyssk/parts.rsi
+    state: l_hand
+
+- type: humanoidBaseSprite
+  id: MobThysskLArm
+  baseSprite:
+    sprite: _Impstation/Mobs/Species/Visitors/Thyssk/parts.rsi
+    state: l_arm
+
+- type: humanoidBaseSprite
+  id: MobThysskLFoot
+  baseSprite:
+    sprite: _Impstation/Mobs/Species/Visitors/Thyssk/parts.rsi
+    state: l_foot
+
+- type: humanoidBaseSprite
+  id: MobThysskRLeg
+  baseSprite:
+    sprite: _Impstation/Mobs/Species/Visitors/Thyssk/parts.rsi
+    state: r_leg
+
+- type: humanoidBaseSprite
+  id: MobThysskRHand
+  baseSprite:
+    sprite: _Impstation/Mobs/Species/Visitors/Thyssk/parts.rsi
+    state: r_hand
+
+- type: humanoidBaseSprite
+  id: MobThysskRArm
+  baseSprite:
+    sprite: _Impstation/Mobs/Species/Visitors/Thyssk/parts.rsi
+    state: r_arm
+
+- type: humanoidBaseSprite
+  id: MobThysskRFoot
+  baseSprite:
+    sprite: _Impstation/Mobs/Species/Visitors/Thyssk/parts.rsi
+    state: r_foot

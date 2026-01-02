@@ -1,0 +1,58 @@
+- type: entity
+  save: false
+  name: Urist MkThyssk
+  parent: BaseMobSpeciesOrganic
+  id: BaseMobThyssk
+  abstract: true
+  components:
+  - type: Hunger
+  - type: Thirst
+  - type: Icon
+    sprite: _Impstation/Mobs/Species/Visitors/Thyssk/parts.rsi
+    state: full
+  - type: Respirator
+  - type: Body
+    prototype: Thyssk
+    requiredLegs: 2
+  - type: Butcherable
+    butcheringType: Spike
+    spawned:
+    - id: FoodMeatHuman
+      amount: 5
+  - type: Fixtures
+    fixtures: # TODO: This needs a second fixture just for mob collisions.
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.35
+        density: 130
+        restitution: 0.0
+        mask:
+        - MobMask
+        layer:
+        - MobLayer
+  - type: Vocal
+    sounds:
+      Male: MaleArachnid
+      Female: FemaleArachnid
+      Unsexed: UnisexArachnid
+  - type: Speech
+    speechSounds: Bass
+  - type: HumanoidAppearance
+    species: Thyssk
+    hideLayersOnEquip:
+    - HeadTop
+  - type: Inventory
+    speciesId: thyssk
+    templateId: thyssk
+
+- type: entity
+  parent: BaseSpeciesDummy
+  id: MobThysskDummy
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    scale: 1, 1
+  - type: Inventory
+    speciesId: thyssk
+    templateId: thyssk

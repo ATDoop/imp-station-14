@@ -1,0 +1,49 @@
+- type: body
+  id: Thyssk
+  name: "Thyssk"
+  root: torso
+  slots:
+    head:
+      part: HeadThyssk
+      connections:
+      - torso
+      organs:
+        brain: OrganHumanBrain
+        eyes: OrganHumanEyes
+    torso:
+      part: TorsoThyssk
+      connections:
+      - right_arm
+      - left_arm
+      - right_leg
+      - left_leg
+      organs:
+        heart: OrganHumanHeart
+        lungs: OrganHumanLungs
+        stomach: OrganHumanStomach
+        liver: OrganHumanLiver
+        kidneys: OrganHumanKidneys
+    right_arm:
+      part: RightArmThyssk
+      connections:
+      - right_hand
+    left_arm:
+      part: LeftArmThyssk
+      connections:
+      - left_hand
+    right_hand:
+      part: RightHandThyssk
+    left_hand:
+      part: LeftHandThyssk
+    right_leg:
+      part: RightLegThyssk
+      connections:
+      - right_foot
+    left_leg:
+      part: LeftLegThyssk
+      connections:
+      - left_foot
+    right_foot:
+      part: RightFootThyssk
+    left_foot:
+      part: LeftFootThyssk
