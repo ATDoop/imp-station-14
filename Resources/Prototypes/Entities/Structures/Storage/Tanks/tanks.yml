@@ -24,6 +24,9 @@
     solution: tank
   - type: ReagentTank
     tankType: Fuel
+    fuelBlacklist: #imp
+      tags:
+        - EchionGun
   - type: DamageOnToolInteract
     tools: Welding
     weldingDamage:

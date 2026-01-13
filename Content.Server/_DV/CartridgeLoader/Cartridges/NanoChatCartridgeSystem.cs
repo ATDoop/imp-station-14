@@ -1,9 +1,18 @@
+// SPDX-FileCopyrightText: 2024 Skubman <ba.fallaria@gmail.com>
+// SPDX-FileCopyrightText: 2024 Tadeo <td12233a@gmail.com>
+// SPDX-FileCopyrightText: 2025 Evaisa <evagiacosa1@gmail.com>
+// SPDX-FileCopyrightText: 2025 EvaisaDev <mail@evaisa.dev>
+// SPDX-FileCopyrightText: 2025 Icepick <122653407+Icepicked@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2025 corresp0nd <46357632+corresp0nd@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2025 taydeo <td12233a@gmail.com>
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
 using System.Linq;
 using Content.Server.Administration.Logs;
 using Content.Server.CartridgeLoader;
 using Content.Server.Power.Components;
 using Content.Server.Radio;
-using Content.Server.Radio.Components;
 using Content.Server.Station.Systems;
 using Content.Shared.Access.Components;
 using Content.Shared.CartridgeLoader;
@@ -16,6 +25,8 @@ using Content.Shared.Radio.Components;
 using Robust.Shared.Configuration;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Timing;
+using Content.Shared.Silicons.Borgs.Components; // Impstation
+using Content.Shared.Silicons.StationAi; // Impstation
 
 namespace Content.Server._DV.CartridgeLoader.Cartridges;
 
@@ -83,7 +94,8 @@ public sealed class NanoChatCartridgeSystem : EntitySystem
             if (!TryComp<PdaComponent>(cartridge.LoaderUid, out var pda))
                 continue;
 
-            var newCard = pda.ContainedId;
+            GetCardEntity(cartridge.LoaderUid.Value, out var newCardEnt); // Impstation
+            var newCard = newCardEnt.Owner; // Impstation
             var currentCard = nanoChat.Card;
 
             // If the cards match, nothing to do
@@ -154,6 +166,14 @@ public sealed class NanoChatCartridgeSystem : EntitySystem
         out Entity<NanoChatCardComponent> card)
     {
         card = default;
+
+        // Begin Impstation
+        if (TryComp<NanoChatCardComponent>(loaderUid, out var selfCard))
+        {
+            card = (loaderUid, selfCard);
+            return true;
+        }
+        // End Impstation
 
         // Get the PDA and check if it has an ID card
         if (!TryComp<PdaComponent>(loaderUid, out var pda) ||
@@ -321,9 +341,6 @@ public sealed class NanoChatCartridgeSystem : EntitySystem
         NanoChatUiMessageEvent msg)
     {
         if (msg.RecipientNumber == null || msg.Content == null || card.Comp.Number == null)
-            return;
-
-        if (!EnsureRecipientExists(card, msg.RecipientNumber.Value))
             return;
 
         var content = msg.Content;
@@ -591,6 +608,20 @@ public sealed class NanoChatCartridgeSystem : EntitySystem
             if (card.Number != number)
                 continue;
 
+            // Begin Impstation - NanoChat cards can be silicons
+            if (HasComp<BorgChassisComponent>(uid))
+            {
+                if (!TryComp<BorgSwitchableTypeComponent>(uid, out var switchable) || switchable.SelectedBorgType is not { } borgType)
+                    return new NanoChatRecipient(number, MetaData(uid).EntityName, null);
+
+                return new NanoChatRecipient(number, MetaData(uid).EntityName, Loc.GetString($"borg-type-{borgType}-transponder"));
+            }
+            if (HasComp<StationAiHeldComponent>(uid))
+            {
+                return new NanoChatRecipient(number, MetaData(uid).EntityName, Loc.GetString($"station-ai-transponder"));
+            }
+            // End Impstation - NanoChat cards can be silicons
+
             // Try to get job title from ID card if possible
             string? jobTitle = null;
             var name = "Unknown";
@@ -629,6 +660,27 @@ public sealed class NanoChatCartridgeSystem : EntitySystem
                     contacts.Add(new NanoChatRecipient(nanoChatNumber, fullName));
                 }
             }
+
+            // Begin Impstation - NanoChat cards can be silicons
+            var borgQuery = AllEntityQuery<NanoChatCardComponent, BorgChassisComponent>();
+            while (borgQuery.MoveNext(out var borgId, out var borgChatCard, out var _))
+            {
+                if (borgChatCard.ListNumber && borgChatCard.Number is uint nanoChatNumber && _station.GetOwningStation(borgId) == station)
+                {
+                    contacts.Add(new NanoChatRecipient(nanoChatNumber, MetaData(borgId).EntityName));
+                }
+            }
+
+            var aiQuery = AllEntityQuery<NanoChatCardComponent, StationAiHeldComponent>();
+            while (aiQuery.MoveNext(out var aiId, out var aiChatCard, out var _))
+            {
+                if (aiChatCard.ListNumber && aiChatCard.Number is uint nanoChatNumber && _station.GetOwningStation(aiId) == station)
+                {
+                    contacts.Add(new NanoChatRecipient(nanoChatNumber, MetaData(aiId).EntityName));
+                }
+            }
+            // End Impstation - NanoChat cards can be silicons
+
             contacts.Sort((contactA, contactB) => string.CompareOrdinal(contactA.Name, contactB.Name));
         }
         else
@@ -669,3 +721,4 @@ public sealed class NanoChatCartridgeSystem : EntitySystem
         _cartridge.UpdateCartridgeUiState(loader, state);
     }
 }
+
