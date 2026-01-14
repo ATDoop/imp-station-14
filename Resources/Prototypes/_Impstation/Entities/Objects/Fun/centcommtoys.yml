@@ -1,0 +1,107 @@
+#Doop's Stuff
+
+- type: entity
+  id: LeechLamp
+  parent: BaseStructure
+  suffix: CentComm Prop
+  categories: [ DoNotMap ]
+  name: hirudinean manifestation
+  description: Some kind of weird glowy thing. Probably just a fancy lamp.
+  components:
+    - type: Sprite
+      sprite: _Impstation/Objects/Fun/Centcomm/centcommprops.rsi
+      state: symbol
+      noRot: true
+      offset: "0.0,0.3"
+    - type: Reflect
+      reflectProb: 1
+      spread: 75
+    - type: Physics
+      bodyType: Static
+    - type: PointLight
+      radius: 2.5
+      energy: 2
+      color: "#91ff00"
+
+- type: entity
+  parent: PlushieBug
+  id: PlushieGoldBug
+  suffix: CentComm Prop
+  categories: [ DoNotMap ]
+  name: golden bug plushie
+  description: You need it. You need it more than anything.
+  components:
+  - type: Sprite
+    sprite: _Impstation/Objects/Fun/Centcomm/centcommprops.rsi
+    state: plushie_goldbug
+  - type: MeleeWeapon
+    wideAnimationRotation: -135
+    attackRate: 1
+    damage:
+      types:
+        Blune: 10
+    soundHit:
+      path: /Audio/Voice/Arachnid/arachnid_scream.ogg
+    animation: WeaponArcBite
+  - type: LandAtCursor
+  - type: DamageOtherOnHit
+    ignoreResistances: true
+    damage:
+      types:
+        Blunt: 10
+    staminaCost: 5
+  - type: Item
+    sprite: _Impstation/Objects/Fun/Centcomm/centcommprops.rsi
+    inhandVisuals:
+      left:
+        - state: plushie_goldbug-inhand-left
+      right:
+        - state: plushie_goldbug-inhand-right
+  - type: Edible
+    requiresSpecialDigestion: false
+    useSound:
+      path: /Audio/Voice/Arachnid/arachnid_scream.ogg
+  - type: GoobAbsorbable #delicious
+    biomassRestored: 0.1
+  - type: FlavorProfile
+    flavors:
+      - whimsy
+  - type: Extractable
+    grindableSolutionName: bugblood
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 10
+        reagents:
+        - ReagentId: Gold
+          Quantity: 5
+        - ReagentId: HeartbreakerToxin
+          Quantity: 5
+      bugblood:
+        maxVol: 10
+        reagents:
+        - ReagentId: CopperBlood
+          Quantity: 10
+  - type: Clothing
+    quickEquip: false
+    sprite: _Impstation/Objects/Fun/Centcomm/centcommprops.rsi
+    equippedPrefix: goldbug
+    slots:
+    - HEAD
+    clothingVisuals:
+      head:
+      - state: goldbug-equipped-HELMET
+        offset: "0, 0.06"
+
+
+- type: entity
+  parent: PosterBase
+  id: PosterLegitLeech
+  name: alien poster
+  suffix: CentComm Prop
+  categories: [ DoNotMap ]
+  description: "A poster of a horrible alien creature you don't recognize. It's a little cute!"
+  components:
+  - type: Sprite
+    sprite: _Impstation/Objects/Fun/Centcomm/centcommprops.rsi
+    state: poster_leech
