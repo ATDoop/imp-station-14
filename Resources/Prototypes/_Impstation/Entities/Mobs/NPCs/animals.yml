@@ -759,3 +759,115 @@
   - type: NpcFactionMember
     factions:
       - Dog
+
+# mummy motes. they're like diona nymphs but mummies.
+- type: entity
+  name: dust pile
+  parent: [SimpleMobBase, StripableInventoryBase]
+  id: MobMummyMote
+  description: A weirdly intelligent looking pile of dust.
+  components:
+  - type: Sprite
+    drawdepth: Mobs
+    layers:
+    - map: ["enum.DamageStateVisualLayers.Base"]
+      state: nymph
+      sprite: Mobs/Animals/nymph.rsi #MUMMY TODO
+  - type: Physics
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.35
+        density: 10 # blow away in the wind because its dust
+        mask:
+        - MobMask
+        layer:
+        - MobLayer
+  - type: MeleeWeapon
+    soundHit:
+        path: /Audio/Effects/bite.ogg
+    angle: 0
+    animation: WeaponArcBite
+    damage:
+      types:
+        Piercing: 5
+  - type: Inventory #MUMMY TODO
+    speciesId: cat
+    templateId: pet
+  - type: Bloodstream #MUMMY TODO
+    bloodReagent: Sap
+    bloodMaxVolume: 60
+  - type: DamageStateVisuals #MUMMY TODO
+    states:
+      Alive:
+        Base: nymph
+      Critical:
+        Base: nymph_sleep
+      Dead:
+        Base: nymph_dead
+  - type: MobThresholds #MUMMY TODO
+    thresholds:
+      0: Alive
+      30: Critical
+      60: Dead
+  - type: MovementSpeedModifier #MUMMY TODO
+    baseWalkSpeed : 2.5
+    baseSprintSpeed : 4.5
+  - type: Grammar #MUMMY TODO
+    attributes:
+      gender: epicene
+  - type: Speech #MUMMY TODO
+    speechVerb: Plant
+    speechSounds: Alto
+    allowedEmotes: ['Chirp']
+  - type: Vocal #MUMMY TODO
+    sounds:
+      Male: UnisexDiona
+      Female: UnisexDiona
+      Unsexed: UnisexDiona
+  - type: NpcFactionMember
+    factions:
+    - Mummy
+  - type: Tag 
+    tags:
+    - DoorBumpOpener
+    - VimPilot
+  - type: Emoting
+  - type: BodyEmotes #MUMMY TODO
+    soundsId: Nymph
+  - type: Reform #MUMMY TODO
+    actionPrototype: DionaReformAction
+    reformTime: 10
+    popupText: diona-reform-attempt
+    reformPrototype: MobDionaReformed
+  - type: Item
+    size: Small
+    heldPrefix: 0
+  - type: CanEscapeInventory
+
+- type: entity
+  name: dust mote
+  description: It's just one little grain of dust, how bad could it be?
+  parent: MobMummyMote
+  id: MobMummyMoteAccent # copying diona homework: these are for motes that dont talk
+  suffix: Accent #MUMMY TODO: these need less health than the brain
+  components:
+  - type: ReplacementAccent
+    accent: nymph
+  - type: PleebnarGibbable
+  - type: HTN
+    rootTask:
+      task: SimpleHostileCompound
+  - type: NpcFactionMember
+    factions:
+    - Mummy
+  - type: MeleeWeapon
+    soundHit:
+        path: /Audio/Effects/bite.ogg
+    angle: 0
+    animation: WeaponArcBite
+    damage:
+      types:
+        Piercing: 5

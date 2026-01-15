@@ -1,0 +1,54 @@
+# Anything human specific (e.g. UI, input) goes under MobHuman
+- type: entity
+  parent: BaseMobSpeciesOrganic
+  id: BaseMobMummy
+  name: Urist McMummy
+  abstract: true
+  components:
+  #they dont get hungry or thirsy, so those components aren't here
+  - type: Icon 
+    sprite: _Impstation/Mobs/Species/Visitors/Mummy/parts.rsi
+    state: full
+#  - type: Butcherable #MUMMY TODO: mummy meat
+#    butcheringType: Spike
+#    spawned:
+#    - id: FoodMeatHuman
+#      amount: 5
+  - type: Body
+    prototype: Mummy
+    requiredLegs: 2
+  - type: Damageable
+    damageContainer: Biological
+    damageModifierSet: Mummy
+  - type: GibAction
+    actionPrototype: DionaGibAction #doesnt need to be a special action MUMMY TODO: mummy organs 
+    allowedStates:
+    - Dead
+  - type: MeleeWeapon
+    soundHit:
+      collection: AlienClaw
+    angle: 30
+    animation: WeaponArcClaw
+    attackRate: 1
+    damage:
+      types:
+        Slash: 10
+  - type: NpcFactionMember
+    factions:
+    - Mummy
+  - type: HumanoidAppearance
+    species: Mummy
+    hideLayersOnEquip:
+    - HeadTop
+  - type: Inventory
+    speciesId: mummy
+    templateId: mummy
+
+- type: entity
+  parent: BaseSpeciesDummy
+  id: MobMummyDummy
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Inventory
+    speciesId: mummy
+    templateId: mummy

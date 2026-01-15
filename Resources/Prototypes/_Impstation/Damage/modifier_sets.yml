@@ -36,3 +36,10 @@
     Blunt: 1.15
     Slash: 1.15
     Piercing: 1.15
+
+- type: damageModifierSet
+  id: Mummy
+  coefficients:
+    Blunt: 0.8
+    Slash: 3 #you have to cut the bandages
+    Piercing: 0.3

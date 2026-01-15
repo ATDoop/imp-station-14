@@ -70,3 +70,28 @@
 
 - type: npcFaction
   id: DogHated
+
+# for mummy motes
+- type: npcFaction
+  id: Mummy
+  hostile: #hostile to all life except zombies (zombies and mummies are famous friends)
+  - NanoTrasen
+  - Dragon
+  - Mouse
+  - Passive
+  - PetsNT
+  - SimpleHostile
+  - SimpleNeutral
+  - Syndicate
+  - Xeno
+  - Revolutionary
+  - Wizard
+  - Xenoborg
+  - Changeling
+  - Heretic
+  - Dino
+  - Penguin
+  - AllHostile
+  - Dog
+  - DuctSpider
+  - Replicator

@@ -1,0 +1,73 @@
+# Chest
+
+# Head
+
+# Snout
+
+# Eyes
+
+- type: marking
+  id: MummyEyesGlow
+  bodyPart: Eyes
+  markingCategory: Eyes
+  speciesRestriction: [ Mummy ]
+  followSkinColor: true
+  forcedColoring: true
+  sprites:
+  - sprite: _Impstation/Mobs/Customization/Visitors/Mummy/eyes.rsi
+    state: mummy_eyes_glow
+  shader: unshaded
+
+# RArm
+
+# LArm
+
+# RLeg
+
+# LLeg
+
+# UndergarmentBottom
+
+# UndergarmentTop
+
+# LFoot
+
+# RFoot
+
+# LHand
+
+# RHand
+
+# FacialHair
+
+# Hair
+
+# HeadSide
+
+# HeadTop
+
+- type: marking
+  id: MummyEars1
+  bodyPart: HeadTop
+  markingCategory: HeadTop
+  speciesRestriction: [ Mummy ]
+  followSkinColor: true
+  forcedColoring: true
+  sprites:
+  - sprite: _Impstation/Mobs/Customization/Visitors/Mummy/headtop.rsi
+    state: mummy_ears_1
+
+# Tail
+
+- type: marking
+  id: MummyTail1
+  bodyPart: Tail
+  markingCategory: Tail
+  speciesRestriction: [ Mummy ]
+  followSkinColor: true
+  forcedColoring: true
+  sprites:
+  - sprite: _Impstation/Mobs/Customization/Visitors/Mummy/tail.rsi
+    state: mummy_tail_1
+
+# RArmExtension
