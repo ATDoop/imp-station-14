@@ -297,3 +297,84 @@
         state: full
       - sprite: Markers/cross.rsi
       - state: green
+
+
+- type: entity
+  id: WallForceMummySpawn #needed for the spawn in animation
+  name: dust wall
+  description: It might bite.
+  components:
+  - type: TimedDespawn
+    lifetime: 0.6
+  - type: SpawnOnDespawn
+    prototype: WallForceMummy
+  - type: Tag
+    tags:
+    - Wall
+  - type: Physics
+    bodyType: Static
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.5,-0.5,0.5,0.5"
+        mask:
+        - SpecialWallLayer
+        layer:
+        - SpecialWallLayer
+  - type: Airtight
+  - type: Sprite
+    sprite: _Impstation/Structures/Magic/mummysandwall.rsi
+    state: mummysandwall_spawn
+    noRot: true
+  - type: Icon
+    sprite: _Impstation/Structures/Magic/mummysandwall.rsi
+    state: mummysandwall_spawn
+
+- type: entity
+  id: WallForceMummy
+  parent: [ SimpleMobBase, MobCombat ]
+  name: dust wall
+  description: It might bite.
+  components:
+  - type: MeleeWeapon # It will bite.
+    hidden: true
+    soundHit:
+      path: /Audio/Effects/bite.ogg
+    angle: 0
+    animation: WeaponArcBite
+    damage:
+      types:
+        Piercing: 2
+  - type: NpcFactionMember
+    factions:
+    - Mummy
+  - type: HTN
+    rootTask:
+      task: SimpleHostileCompound
+  - type: TimedDespawn
+    lifetime: 10
+  - type: Tag
+    tags:
+    - Wall
+  - type: Physics
+    bodyType: Static
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.5,-0.5,0.5,0.5"
+        mask:
+        - SpecialWallLayer
+        layer:
+        - SpecialWallLayer
+  - type: Airtight
+  - type: Sprite
+    sprite: _Impstation/Structures/Magic/mummysandwall.rsi
+    state: mummysandwall
+    noRot: true
+  - type: Icon
+    sprite: _Impstation/Structures/Magic/mummysandwall.rsi
+    state: mummysandwall

@@ -1,0 +1,34 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "by atdoop (github) for impstation.",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "mummysandwall",
+      "delays": [
+        [
+          0.15,
+          0.15,
+          0.15,
+          0.15
+        ]
+      ]
+    },
+    {
+      "name": "mummysandwall_spawn",
+      "delays": [
+        [
+          0.1,
+          0.15,
+          0.15,
+          0.1,
+          0.1
+        ]
+      ]
+    }
+  ]
+}

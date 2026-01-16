@@ -36,6 +36,8 @@
   - type: NpcFactionMember
     factions:
     - Mummy
+  - type: TypingIndicator
+    proto: moth #MUMMY TODO: custom typing indicator
   - type: HumanoidAppearance
     species: Mummy
     hideLayersOnEquip:

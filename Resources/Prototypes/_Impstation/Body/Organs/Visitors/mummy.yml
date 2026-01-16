@@ -221,7 +221,7 @@
   categories: [ HideSpawnMenu ]
   name: mummy mote
   suffix: Stomach
-  description: A strangely catlike dust particle. It doesn't seem to like you very much.
+  description: A strangely motile little clump of dust and sand. It'd be cute if it weren't biting you!
   components:
   - type: IsDeadIC
   - type: Body
@@ -233,7 +233,7 @@
   categories: [ HideSpawnMenu ]
   name: mummy mote
   suffix: Lungs
-  description: A strangely catlike dust particle. It doesn't seem to like you very much.
+  description: A strangely motile little clump of dust and sand. It'd be cute if it weren't biting you!
   components:
   - type: IsDeadIC
   - type: Body
@@ -245,7 +245,7 @@
   categories: [ HideSpawnMenu ]
   name: mummy mote
   suffix: Heart
-  description: A strangely catlike dust particle. It doesn't seem to like you very much.
+  description: A strangely motile little clump of dust and sand. It'd be cute if it weren't biting you!
   components:
   - type: IsDeadIC
   - type: Body
@@ -257,7 +257,7 @@
   categories: [ HideSpawnMenu ]
   name: mummy mote
   suffix: Liver
-  description: A strangely catlike dust particle. It doesn't seem to like you very much.
+  description: A strangely motile little clump of dust and sand. It'd be cute if it weren't biting you!
   components:
   - type: IsDeadIC
   - type: Body
@@ -269,7 +269,7 @@
   categories: [ HideSpawnMenu ]
   name: mummy mote
   suffix: Kidneys
-  description: A strangely catlike dust particle. It doesn't seem to like you very much.
+  description: A strangely motile little clump of dust and sand. It'd be cute if it weren't biting you!
   components:
   - type: IsDeadIC
   - type: Body

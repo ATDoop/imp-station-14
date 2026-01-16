@@ -771,8 +771,8 @@
     drawdepth: Mobs
     layers:
     - map: ["enum.DamageStateVisualLayers.Base"]
-      state: nymph
-      sprite: Mobs/Animals/nymph.rsi #MUMMY TODO
+      state: mummymote
+      sprite: _Impstation/Mobs/Animals/MummyMotes/mummymote.rsi #MUMMY TODO: animate the mummy mote make it bounce like a fuzzy 
   - type: Physics
   - type: Fixtures
     fixtures:
@@ -799,14 +799,14 @@
   - type: Bloodstream #MUMMY TODO
     bloodReagent: Sap
     bloodMaxVolume: 60
-  - type: DamageStateVisuals #MUMMY TODO
+  - type: DamageStateVisuals #MUMMY TODO: damage states for motes
     states:
       Alive:
-        Base: nymph
+        Base: mummymote
       Critical:
-        Base: nymph_sleep
+        Base: mummymote
       Dead:
-        Base: nymph_dead
+        Base: mummymote
   - type: MobThresholds #MUMMY TODO
     thresholds:
       0: Alive
@@ -849,13 +849,13 @@
 
 - type: entity
   name: dust mote
-  description: It's just one little grain of dust, how bad could it be?
+  description: It's just one little clump of dust, how bad could it be?
   parent: MobMummyMote
   id: MobMummyMoteAccent # copying diona homework: these are for motes that dont talk
   suffix: Accent #MUMMY TODO: these need less health than the brain
   components:
   - type: ReplacementAccent
-    accent: nymph
+    accent: nymph #MUMMY TODO: mummy mote acccent (Nya nhyaa Myoaaa Myar)
   - type: PleebnarGibbable
   - type: HTN
     rootTask:
