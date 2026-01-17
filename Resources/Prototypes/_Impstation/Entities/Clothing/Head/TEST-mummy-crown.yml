@@ -1,0 +1,49 @@
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeatHatMummyCrown
+  name: mummy crown
+  description: "\"Gentlemen?\""
+  components:
+  - type: Sprite
+    sprite: Clothing/Head/Hats/beaver_hat.rsi
+  - type: Clothing
+    sprite: Clothing/Head/Hats/beaver_hat.rsi
+  - type: ClothingLatchOn
+  - type: ClothingGrantAction
+    action: ActionSandWave
+  - type: MummyArtifact
+
+- type: entity
+  id: AdminInstantEffectLocalRepulsion
+  name: instant effect
+  suffix: Local Repulsion
+  components:
+  - type: TimedDespawn
+  - type: TriggerOnSpawn
+  - type: ImpRepulsionOnTrigger
+    throwDeadzone: 0
+
+- type: entity
+  id: SandWave
+  categories: [HideSpawnMenu]
+  components:
+  - type: TimedDespawn
+  - type: TriggerOnSpawn
+  - type: ImpRepulsionOnTrigger
+
+- type: entity
+  parent: BaseAction
+  id: ActionSandWave
+  name: Sand Wave
+  description: Summons a sand wave to push back aggressors.
+  components:
+  - type: Actions
+    useDelay: 10
+    itemIconStyle: BigAction
+    icon:
+      sprite: Actions/smokeaction.rsi # TODO: sprite
+      state: smokeaction
+  - type: InstantAction
+    event: !type:InstantSpawnSpellEvent
+      prototype: SandWave
+      posData: !type:TargetCasterPos
