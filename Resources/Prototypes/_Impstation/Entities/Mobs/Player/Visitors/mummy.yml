@@ -3,3 +3,93 @@
   name: Urist McMummy
   parent: BaseMobMummy
   id: MobMummy
+
+- type: entity
+  save: false
+  parent: MobMummy
+  id: MobMummyGhostrole
+  components:
+  - type: GhostRole
+    allowMovement: true
+    allowSpeech: true
+    makeSentient: true
+    name: mummy # TODO
+    description: you are a mummy # TODO
+    rules: there are rules # TODO
+  - type: GhostTakeoverAvailable
+
+- type: entity
+  name: Mummy + Sarcophagus Spawner
+  suffix: Effect
+  id: MummySpawner
+  parent: MarkerBase
+  components:
+  - type: Sprite
+    layers:
+      - state: blue
+      - sprite: _Impstation/Mobs/Species/Goblin/parts.rsi
+        state: full
+  - type: GroupSpawner
+    spawns:
+    - id: MummySarcophagusFilled # TODO: make the sarcophagus for real
+      amount: 1
+    - id: SandWave # TODO: Original effect
+      amount: 1
+
+- type: entityTable
+  id: MummySarcophagusFillTable
+  table: !type:AllSelector
+    children:
+    - id: MobMummyGhostrole
+
+- type: entity
+  id: MummySarcophagusFilled
+  parent: MummySarcophagus
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      entity_storage: !type:NestedSelector
+        tableId: MummySarcophagusFillTable
+
+- type: entity
+  name: sarcophagus
+  id: MummySarcophagus
+  suffix: TEMPORARY
+  parent: LockerSteel
+  components:
+  - type: AccessReader
+    access: [["Wizard"]]
+  - type: ResistLocker
+    resistTime: 3
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.25,-0.48,0.25,0.48"
+        density: 4096 # Extremely dense to make moving it difficult.
+        mask:
+        - MachineMask
+        layer:
+        - MachineLayer
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 100000
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalBreak
+          params:
+            volume: -6
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          MobMummyMote:
+            min: 3
+            max: 5
+          SandWave:
+            min: 1
+            max: 1

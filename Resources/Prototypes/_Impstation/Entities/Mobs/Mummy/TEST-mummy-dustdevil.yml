@@ -1,0 +1,54 @@
+- type: entity
+  name: dust devil
+  suffix: TEMPORARY
+  parent: [SimpleMobBase]
+  id: MobMummyDustDevil
+  components:
+  - type: Sprite
+    drawdepth: Mobs
+    layers:
+    - map: ["enum.DamageStateVisualLayers.Base"]
+      state: mummymote
+      sprite: _Impstation/Mobs/Animals/MummyMotes/mummymote.rsi #MUMMY TODO: animate the mummy mote make it bounce like a fuzzy
+  - type: Physics
+    bodyStatus: InAir
+  - type: CanMoveInAir
+  - type: MovementIgnoreGravity
+    weightless: true
+  - type: MovementAlwaysTouching
+  - type: MovementSpeedModifier
+    baseWalkSpeed: 2 # same as slime
+    baseSprintSpeed: 4.2
+    baseWeightlessModifier: 1.0
+    baseWeightlessFriction: 1
+    weightlessFrictionNoInput: 4
+    baseWeightlessAcceleration: 4
+  - type: Fixtures
+    fixtures:
+      fix1:
+        density: 7
+        restitution: 1.0
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.35
+        mask:
+        - MobMask
+        layer:
+        - MobMask
+  - type: MeleeWeapon
+    soundHit:
+        path: /Audio/Effects/bite.ogg
+    angle: 0
+    animation: WeaponArcBite
+    damage:
+      types:
+        Slash: 10
+  - type: DamageContacts
+    damage:
+      types:
+        Slash: 5
+  - type: NpcFactionMember
+    factions:
+    - Mummy
+  - type: WalkingConvertsTiles
+
