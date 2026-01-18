@@ -6,7 +6,7 @@
   abstract: true
   components:
   #they dont get hungry or thirsy, so those components aren't here
-  - type: Icon 
+  - type: Icon
     sprite: _Impstation/Mobs/Species/Visitors/Mummy/parts.rsi
     state: full
 #  - type: Butcherable #MUMMY TODO: mummy meat
@@ -21,7 +21,7 @@
     damageContainer: Biological
     damageModifierSet: Mummy
   - type: GibAction
-    actionPrototype: DionaGibAction #doesnt need to be a special action MUMMY TODO: mummy organs 
+    actionPrototype: DionaGibAction #doesnt need to be a special action MUMMY TODO: mummy organs
     allowedStates:
     - Dead
   - type: MeleeWeapon
@@ -45,6 +45,9 @@
   - type: Inventory
     speciesId: mummy
     templateId: mummy
+  - type: Access
+    tags:
+    - Wizard
 
 - type: entity
   parent: BaseSpeciesDummy

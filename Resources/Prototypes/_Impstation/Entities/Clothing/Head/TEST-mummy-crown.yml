@@ -1,6 +1,6 @@
 - type: entity
   parent: ClothingHeadBase
-  id: ClothingHeatHatMummyCrown
+  id: ClothingHeadHatMummyCrown
   name: mummy crown
   description: "\"Gentlemen?\""
   components:
@@ -12,6 +12,8 @@
   - type: ClothingGrantAction
     action: ActionSandWave
   - type: MummyArtifact
+  - type: AddGameruleOnEquip
+    gameRule: MummySpawnOnCrownEquip
 
 - type: entity
   id: AdminInstantEffectLocalRepulsion
@@ -30,6 +32,8 @@
   - type: TimedDespawn
   - type: TriggerOnSpawn
   - type: ImpRepulsionOnTrigger
+  - type: TileReplaceRadiusOnTrigger
+  #- type: EmitSoundOnTrigger # We don't have a sound for it yet.
 
 - type: entity
   parent: BaseAction
@@ -37,7 +41,7 @@
   name: Sand Wave
   description: Summons a sand wave to push back aggressors.
   components:
-  - type: Actions
+  - type: Action
     useDelay: 10
     itemIconStyle: BigAction
     icon:

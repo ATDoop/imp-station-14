@@ -1,0 +1,11 @@
+- type: entity
+  id: MummySpawnOnCrownEquip
+  parent: BaseGameRule
+  components:
+  - type: GameRule
+  - type: StationEvent
+    weight: 0.0
+    duration: null
+    maxOccurrences: 1
+  - type: RandomSpawnRule
+    prototype: MummySpawner
