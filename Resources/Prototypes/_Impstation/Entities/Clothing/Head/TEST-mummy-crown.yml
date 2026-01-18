@@ -1,13 +1,36 @@
 - type: entity
   parent: ClothingHeadBase
-  id: ClothingHeatHatMummyCrown
-  name: mummy crown
-  description: "\"Gentlemen?\""
+  id: ClothingHeadHatMummyCrown
+  name: ancient crown
+  description: An incredible archaeological find that obviously belongs directly on top of your head as soon as possible.
   components:
   - type: Sprite
-    sprite: Clothing/Head/Hats/beaver_hat.rsi
+    sprite: _Impstation/Clothing/Head/Helmets/mummycrown.rsi
+    layers:
+    - state: icon
+    - state: icon-unshaded
+      shader: unshaded
   - type: Clothing
-    sprite: Clothing/Head/Hats/beaver_hat.rsi
+    sprite: _Impstation/Clothing/Head/Helmets/mummycrown.rsi
+    clothingVisuals:
+      head:
+      - state: equipped-head
+        offset: "0, 0.125"
+      - state: equipped-head-unshaded
+        shader: unshaded
+        offset: "0, 0.125"
+      head-mummy: #MUMMY TODO: more species variants
+      - state: equipped-head-mummy
+        offset: "0, 0.1875"
+      - state: equipped-head-unshaded-mummy
+        shader: unshaded
+        offset: "0, 0.1875"
+      head-vox:
+      - state: equipped-head-vox
+        offset: "0, 0.125"
+      - state: equipped-head-unshaded-vox
+        shader: unshaded
+        offset: "0, 0.125"
   - type: ClothingLatchOn
   - type: ClothingGrantAction
     action: ActionSandWave
@@ -41,7 +64,7 @@
     useDelay: 10
     itemIconStyle: BigAction
     icon:
-      sprite: Actions/smokeaction.rsi # TODO: sprite
+      sprite: Actions/smokeaction.rsi # MUMMY TODO: sprite
       state: smokeaction
   - type: InstantAction
     event: !type:InstantSpawnSpellEvent
