@@ -52,7 +52,11 @@
   id: SandWave
   categories: [HideSpawnMenu]
   components:
+  - type: Sprite
+    sprite: _Impstation/Effects/mummysandwave.rsi
+    state: sandwave
   - type: TimedDespawn
+    lifetime: 0.525
   - type: TriggerOnSpawn
   - type: ImpRepulsionOnTrigger
   - type: TileReplaceRadiusOnTrigger

@@ -57,6 +57,18 @@
   suffix: TEMPORARY
   parent: LockerSteel
   components:
+  - type: Sprite
+    noRot: true
+    sprite: _Impstation/Structures/Storage/mummysarcophagus.rsi # imp
+    layers:
+    - state: sarcophagus
+      map: ["enum.StorageVisualLayers.Base"]
+    - state: sarcophagus_door
+      map: ["enum.StorageVisualLayers.Door"]
+  - type: EntityStorageVisuals
+    stateBaseClosed: sarcophagus
+    stateDoorOpen: sarcophagus_open
+    stateDoorClosed: sarcophagus_door
   - type: AccessReader
     access: [["Wizard"]]
   - type: ResistLocker
