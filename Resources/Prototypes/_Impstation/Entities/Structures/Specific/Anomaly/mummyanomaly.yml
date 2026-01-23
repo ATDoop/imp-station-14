@@ -1,0 +1,163 @@
+- type: entity
+  id: AnomalyMummy #dont put this in spawners! not parented to the base anomaly so i can mess with the sound and animation stuff
+  name: anomummy
+  description: Thousands and thousands of year of anger condense into a single point. You're probably too close to it.
+  suffix: Mummy
+  components:
+  - type: Anomaly
+    corePrototype: AnomalyCoreFlesh #MUMMY TODO
+    coreInertPrototype: AnomalyCoreFleshInert
+    minPulseLength: 180
+    maxPulseLength: 300
+    supercriticalSoundAtAnimationStart:
+      collection: AnomalyFleshSupercritical #MUMMY TODO
+  - type: AmbientSound
+    range: 5
+    volume: -5
+    sound:
+      path: /Audio/Ambience/anomaly_drone.ogg #MUMMY TODO
+  - type: Transform
+    anchored: false
+  - type: Physics
+    bodyType: Static
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.35
+        density: 50
+        mask:
+        - FlyingMobMask
+        layer:
+        - FlyingMobLayer
+  - type: Sprite
+    noRot: true
+    drawdepth: Effects
+    sprite: _Impstation/Structures/Specific/Anomalies/mummyanomaly.rsi
+    layers:
+    - state: sarconomaly_darkness #the sinister pinecone
+    - state: sarconomaly_lines
+      shader: unshaded
+    - state: sarconomaly
+      map: ["enum.AnomalyVisualLayers.Base"]
+    - state: sarconomaly_pulse #MUMMY TODO
+      map: ["enum.AnomalyVisualLayers.Animated"]
+      visible: false
+    - state: sarconomaly_face
+      shader: unshaded
+  - type: InteractionOutline
+  - type: Clickable
+  - type: Damageable
+  - type: Appearance
+  - type: AnimationPlayer
+  - type: GuideHelp
+    guides:
+    - AnomalousResearch #MUMMY TODO ?
+  - type: EmitSoundOnSpawn
+    sound:
+      path: /Audio/Effects/teleport_arrival.ogg #MUMMY TODO
+  - type: SecretDataAnomaly
+    randomStartSecretMin: 0
+    randomStartSecretMax: 2
+  - type: DamageOnInteract
+    damage:
+      types:
+        Slash: 10
+    popupText: anomaly-component-contact-damage # MUMMY TODO: something about the bandages cutting you
+  - type: DamageOnAttacked
+    damage:
+      types:
+        Slash: 10
+  - type: WarpPoint
+    blacklist:
+      tags:
+      - GhostOnlyWarp
+  - type: Tag
+    tags:
+    - GhostOnlyWarp
+  - type: NameIdentifier
+    group: Anomaly
+  - type: PointLight
+    radius: 1.0
+    energy: 3.5
+    color: "#e92138"
+    castShadows: false
+  - type: TileSpawnAnomaly
+    entries:
+    - settings:
+        spawnOnPulse: true
+        spawnOnStabilityChanged: true
+        minAmount: 10
+        maxAmount: 15
+        maxRange: 5
+      floor: FloorMummyDesert
+    - settings:
+        spawnOnSuperCritical: true
+        minAmount: 30
+        maxAmount: 75 # MUMMY TODO: check and see if this is a reasonable amount. it should be A LOT of tiles.
+        maxRange: 30
+      floor: FloorMummyDesert
+  - type: EntitySpawnAnomaly
+    entries:
+    - settings:
+        spawnOnPulse: true
+        minAmount: 1
+        maxAmount: 4
+        minRange: 1.5
+        maxRange: 2.5
+      spawns:
+      - FleshBlocker #MUMMY TODO
+    - settings:
+        spawnOnPulse: true
+        maxAmount: 3
+        minRange: 3
+        maxRange: 4.5
+      spawns:
+      - MobFleshJared #MUMMY TODO
+      - MobFleshGolem
+      - MobFleshClamp
+      - MobFleshLover
+    - settings:
+        spawnOnSuperCritical: true
+        minAmount: 10
+        maxAmount: 15
+        minRange: 5
+        maxRange: 15
+      spawns:
+      - FleshBlocker #MUMMY TODO
+    - settings:
+        spawnOnSuperCritical: true
+        minAmount: 5
+        maxAmount: 10
+        maxRange: 8
+      spawns:
+      - MobFleshJared #MUMMY TODO
+      - MobFleshGolem
+      - MobFleshClamp
+      - MobFleshLover
+    - settings:
+        spawnOnShutdown: true
+        maxAmount: 2
+        maxRange: 1
+      spawns:
+      - MobFleshJared #MUMMY TODO
+      - MobFleshGolem
+      - MobFleshClamp
+      - MobFleshLover
+  - type: WallSpawnAnomaly #imp
+    entries:
+    - settings:
+        spawnOnPulse: true
+        spawnOnStabilityChanged: true
+        spawnOnSeverityChanged: true
+        minAmount: 3
+        maxAmount: 7
+        maxRange: 4
+      wall: WallMeat #MUMMY TODO
+    - settings:
+        spawnOnSuperCritical: true
+        minAmount: 10
+        maxAmount: 30
+        maxRange: 10
+      wall: WallMeat #MUMMY TODO

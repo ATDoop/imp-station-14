@@ -7,6 +7,8 @@ tiles-chapel-floor-sw = chapel floor (south-west)
 tiles-crafted-asphalt = asphalt (crafted)
 tiles-shoveled-astro-snow = shoveled astro-snow
 
+tiles-mummy-desert = dusty desert
+
 tiles-reaper-tiles = reaper tile
 tiles-reaper-tombstonebig = large tombstone tile
 tiles-reaper-tombstone = tombstone tile

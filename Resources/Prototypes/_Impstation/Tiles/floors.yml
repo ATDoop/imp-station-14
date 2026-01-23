@@ -71,6 +71,42 @@
   deconstructTools: [ Prying ]
   itemDrop: FloorTileItemCraftedAsphalt
 
+# mummy desert tile
+- type: tile
+  id: FloorMummyDesert
+  name: tiles-mummy-desert
+  sprite: /Textures/_Impstation/Tiles/MummyTiles/mummysand.png
+  variants: 12
+  placementVariants:
+  - 0.2
+  - 0.02
+  - 0.02
+  - 0.02
+  - 0.02
+  - 0.02
+  - 0.2
+  - 0.2
+  - 0.14
+  - 0.14
+  - 0.1
+  - 0.08
+  edgeSpritePriority: 1
+  edgeSprites:
+    SouthEast: /Textures/_Impstation/Tiles/MummyTiles/mummysand_single_edge.png
+    NorthEast: /Textures/_Impstation/Tiles/MummyTiles/mummysand_single_edge.png
+    NorthWest: /Textures/_Impstation/Tiles/MummyTiles/mummysand_single_edge.png
+    SouthWest: /Textures/_Impstation/Tiles/MummyTiles/mummysand_single_edge.png
+    South: /Textures/_Impstation/Tiles/MummyTiles/mummysand_double_edge.png
+    East: /Textures/_Impstation/Tiles/MummyTiles/mummysand_double_edge.png
+    North: /Textures/_Impstation/Tiles/MummyTiles/mummysand_double_edge.png
+    West: /Textures/_Impstation/Tiles/MummyTiles/mummysand_double_edge.png
+  baseTurf: FloorDesert
+  isSubfloor: true
+  footstepSounds:
+    collection: FootstepAsteroid
+  heatCapacity: 10000
+  weather: true
+
 # Faux sci tiles
 - type: tile
   id: FloorShoveledAstroSnow
