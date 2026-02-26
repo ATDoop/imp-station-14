@@ -246,3 +246,13 @@
   products:
     Ash: 3
     Fresium: 2
+
+- type: reagent
+  id: MummyBlood # todo: if puddles can ever look like something other than liquid, mummy blood puddles should be dust piles
+  name: reagent-name-mummy-blood
+  group: Biological
+  parent: Blood
+  desc: reagent-desc-mummy-blood
+  physicalDesc: reagent-physical-desc-dusty
+  flavor: dusty
+  color: "#cba956"

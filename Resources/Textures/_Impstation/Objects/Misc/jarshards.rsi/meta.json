@@ -1,0 +1,20 @@
+{
+    "version": 1,
+    "license": "CC-BY-SA-3.0",
+    "copyright": "by atdoop (github)",
+    "size": {
+        "x": 32,
+        "y": 32
+    },
+    "states": [
+        {
+            "name": "jarshards-1"
+        },
+        {
+            "name": "jarshards-2"
+        },
+        {
+            "name": "jarshards-3"
+        }
+    ]
+}

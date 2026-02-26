@@ -1,6 +1,5 @@
-# Anything human specific (e.g. UI, input) goes under MobHuman
 - type: entity
-  parent: BaseMobSpeciesOrganic
+  parent: BaseMobSpecies #theyre not organic MUMMY TODO: make sure this didnt fuck anything up
   id: BaseMobMummy
   name: Urist McMummy
   abstract: true
@@ -14,16 +13,12 @@
 #    spawned:
 #    - id: FoodMeatHuman
 #      amount: 5
-  - type: Body
+  - type: Body #MUMMY TODO organs
     prototype: Mummy
     requiredLegs: 2
   - type: Damageable
     damageContainer: Biological
     damageModifierSet: Mummy
-  - type: GibAction
-    actionPrototype: DionaGibAction #doesnt need to be a special action MUMMY TODO: mummy organs
-    allowedStates:
-    - Dead
   - type: MeleeWeapon
     soundHit:
       collection: AlienClaw
@@ -47,7 +42,7 @@
     templateId: mummy
   - type: Access
     tags:
-    - Wizard
+    - Wizard #for sarocpogus
 
 - type: entity
   parent: BaseSpeciesDummy

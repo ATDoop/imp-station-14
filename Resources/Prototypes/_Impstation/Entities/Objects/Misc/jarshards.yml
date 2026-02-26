@@ -1,0 +1,54 @@
+- type: entity
+  parent: BaseScrap
+  id: CanopicJarShard
+  name: jar shard #ermm actually ceramic shards are called sherds
+  description: A small fragment of a canopic jar. It's coated in a thin layer of dust.
+  components:
+  - type: Sprite
+    sprite: _Impstation/Objects/Misc/jarshards.rsi
+    layers:
+    - state: jarshards-1
+      map: [ "base" ]
+  - type: Item
+    size: Tiny
+  - type: RandomSprite
+    available:
+    - base:
+        jarshards-1: ""
+        jarshards-2: ""
+        jarshards-3: ""
+  - type: PhysicalComposition
+    materialComposition:
+      Gold: 1 # 0.01 bar
+  - type: Tag
+    tags:
+    - Trash
+
+- type: entity
+  parent: BaseItem
+  id: CanopicJarDust
+  name: strange dust
+  description: The former contents of a canopic jar. It seems to still be moving, ever so slightly...
+  components:
+  - type: Item
+    size: Tiny
+  - type: Sprite
+    sprite: _Impstation/Mobs/MummyMobs/jarwarriors.rsi
+    state: jarwarrior-dust
+  - type: Tag
+    tags:
+    - Trash
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 50
+        reagents:
+        - ReagentId: MummyBlood
+          Quantity: 10
+  - type: SolutionSpiker
+    sourceSolution: food
+    ignoreEmpty: true
+  - type: ScoopableSolution
+    solution: food
+  - type: Extractable
+    grindableSolutionName: food

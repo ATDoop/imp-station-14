@@ -22,3 +22,22 @@
   - type: HideLayerClothing
     layers:
       Hair: HEAD
+
+- type: entity
+  parent: ClothingHeadHelmetBasic
+  id: ClothingHeadCanopicJarHelmet
+  name: canopic jar lid
+  description: The dusty lid of a canopic jar. It looks just big enough to fit over your head...
+  components:
+  - type: Sprite
+    sprite: _Impstation/Clothing/Head/Helmets/canopicjarhelmet.rsi
+  - type: Clothing
+    sprite: _Impstation/Clothing/Head/Helmets/canopicjarhelmet.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.95 #not much
+  - type: IdentityBlocker
+  - type: HideLayerClothing
+    slots:
+    - HeadTop

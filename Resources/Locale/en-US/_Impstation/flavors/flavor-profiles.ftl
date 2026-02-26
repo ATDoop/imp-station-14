@@ -7,6 +7,7 @@ flavor-base-shrimp = shrimpy
 flavor-base-something = like something
 flavor-base-weird = weird
 flavor-base-ectoplasm = ghastly
+flavor-base-dusty = dusty
 flavor-base-fatty = fatty
 flavor-base-gooey = gooey
 flavor-base-ants = like ants

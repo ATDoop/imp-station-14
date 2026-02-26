@@ -1,0 +1,6 @@
+- type: soundCollection
+  id: PotBreak
+  files: 
+  - /Audio/_Impstation/Effects/Mummies/potbreak_1.ogg
+  - /Audio/_Impstation/Effects/Mummies/potbreak_2.ogg
+  - /Audio/_Impstation/Effects/Mummies/potbreak_3.ogg

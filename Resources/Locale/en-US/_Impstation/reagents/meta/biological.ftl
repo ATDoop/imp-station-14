@@ -19,6 +19,9 @@ reagent-desc-gray-blood = Thui hope glump mochigi ketchup.
 reagent-name-reaper-blood = ectoplasm
 reagent-desc-reaper-blood = The liquefied essence of soul that maintains the corporeal forms of various spectral entities.
 
+reagent-name-mummy-blood = strange dust
+reagent-desc-mummy-blood = Millions of grains of dust commingle into something greater.
+
 reagent-name-mucin = mucin
 reagent-desc-mucin = A fascinating secretion capable of accelerating the movement of Gastropoids. It looks exploitable...
 

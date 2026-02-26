@@ -159,6 +159,11 @@
   description: flavor-base-ectoplasm
 
 - type: flavor
+  id: dust
+  flavorType: Base
+  description: flavor-base-dusty
+
+- type: flavor
   id: thavenflesh
   flavorType: Complex
   description: flavor-complex-thavenflesh

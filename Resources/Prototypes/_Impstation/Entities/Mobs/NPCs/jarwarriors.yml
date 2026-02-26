@@ -1,0 +1,94 @@
+- type: entity
+  name: canopic jar warrior
+  parent: [ MobCombat, SimpleSpaceMobBase ]
+  id: MobCanopicJarWarrior
+  description: An angry little canopic jar with arms and legs made from dust. It's weapons look like they're about to fall apart at any second...
+  components:
+  - type: Sprite
+    drawdepth: Mobs
+    layers:
+    - map: ["enum.DamageStateVisualLayers.Base"]
+      state: jarwarrior
+      sprite: _Impstation/Mobs/MummyMobs/jarwarriors.rsi
+  - type: NpcFactionMember
+    factions:
+      - Mummy
+  - type: InputMover
+  - type: MobMover
+  - type: HTN
+    rootTask:
+      task: SimpleHostileCompound
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.35
+        density: 175
+        mask:
+        - MobMask
+        layer:
+        - MobLayer
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      30: Dead
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 30
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+      - !type:PlaySoundBehavior
+        sound:
+          collection: PotBreak
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          ClothingHeadCanopicJarHelmet:
+            min: 0
+            max: 1
+          CanopicJarShard:
+            min: 1
+            max: 3
+          CanopicJarDust:
+            min: 1
+            max: 1
+  - type: MeleeWeapon
+    altDisarm: false
+    angle: 0
+    animation: WeaponArcDisarm #this is actually a slashing animation. WeaponArcSlash does not use its own sprite, and disarms dont use this weapon arc. what??
+    soundHit:
+      path: /Audio/Weapons/bladeslice.ogg
+    damage:
+      types:
+        Slash: 5
+  - type: ReplacementAccent #MUMMY TODO
+    accent: bros
+  - type: Speech #MUMMY TODO
+    speechSounds: Bros
+    speechVerb: Bros
+  - type: Vocal #MUMMY TODO
+    sounds:
+      Male: Bros
+      Female: Bros
+      Unsexed: Bros
+    wilhelmProbability: 0.001
+  - type: TriggerOnMobstateChange
+    mobState:
+    - Dead
+  - type: EmitSoundOnTrigger
+    sound:
+      collection: PotBreak
+      params:
+        variation: 0.125
+  - type: Bloodstream
+    bloodReferenceSolution:
+      reagents:
+      - ReagentId: MummyBlood
+        Quantity: 15
+  - type: NoSlip
+  - type: ZombieImmune
+  - type: NPCRetaliation
+  - type: AlwaysRevolutionaryConvertible #imp
