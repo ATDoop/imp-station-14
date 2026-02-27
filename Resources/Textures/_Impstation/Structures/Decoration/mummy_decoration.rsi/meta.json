@@ -1,0 +1,38 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "by atdoop (github)",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "blocker-1"
+    },
+    {
+      "name": "blocker-2"
+    },
+    {
+      "name": "blocker-3"
+    },
+    {
+      "name": "blocker-4"
+    },
+    {
+      "name": "blocker-5"
+    },
+    {
+      "name": "blocker-6"
+    },
+    {
+      "name": "blocker-7"
+    },
+    {
+      "name": "blocker-8"
+    },
+    {
+      "name": "blocker-9"
+    }
+  ]
+}

@@ -1,5 +1,5 @@
 - type: entity
-  name: canopic jar warrior
+  name: canopic warrior #mummy todo: these should be ghost roles
   parent: [ MobCombat, SimpleSpaceMobBase ]
   id: MobCanopicJarWarrior
   description: An angry little canopic jar with arms and legs made from dust. It's weapons look like they're about to fall apart at any second...
@@ -64,6 +64,9 @@
     damage:
       types:
         Slash: 5
+  - type: MovementSpeedModifier
+    baseWalkSpeed: 2
+    baseSprintSpeed: 2.5 #they're not good at pursuing, they should be defending
   - type: ReplacementAccent #MUMMY TODO
     accent: bros
   - type: Speech #MUMMY TODO
@@ -83,12 +86,7 @@
       collection: PotBreak
       params:
         variation: 0.125
-  - type: Bloodstream
-    bloodReferenceSolution:
-      reagents:
-      - ReagentId: MummyBlood
-        Quantity: 15
   - type: NoSlip
   - type: ZombieImmune
   - type: NPCRetaliation
-  - type: AlwaysRevolutionaryConvertible #imp
+  - type: AlwaysRevolutionaryConvertible #yeah sure whatever

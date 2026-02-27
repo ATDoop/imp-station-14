@@ -1,0 +1,85 @@
+- type: entity
+  id: MummyBlocker
+  parent: BaseStructure
+  name: dust structure
+  description: Dust coalesces into familiar forms.
+  components:
+  - type: InteractionOutline
+  - type: Sprite
+    noRot: true
+    sprite: _Impstation/Structures/Decoration/mummy_decoration.rsi
+    layers:
+    - state: blocker-1
+      map: [ "enum.DamageStateVisualLayers.Base" ]
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.3
+        density: 190
+        mask:
+        - MachineMask
+        layer:
+        - Impassable
+  - type: RandomSprite
+    available:
+      - enum.DamageStateVisualLayers.Base:
+          blocker-1: ""
+          blocker-2: ""
+          blocker-3: ""
+          blocker-7: ""
+          blocker-8: ""
+          blocker-9: ""
+  - type: Damageable
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 25
+      behaviors:
+        - !type:DoActsBehavior
+          acts: [ "Destruction" ]
+        - !type:PlaySoundBehavior
+          sound:
+            path: /Audio/Effects/break_stone.ogg
+
+- type: entity
+  id: MummyBlockerRare
+  parent: BaseStructure
+  name: dust structure
+  description: Dust coalesces into familiar forms.
+  components:
+  - type: InteractionOutline
+  - type: Sprite
+    noRot: true
+    sprite: _Impstation/Structures/Decoration/mummy_decoration.rsi
+    layers:
+    - state: blocker-4
+      map: [ "enum.DamageStateVisualLayers.Base" ]
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.3
+        density: 190
+        mask:
+        - MachineMask
+        layer:
+        - Impassable
+  - type: RandomSprite
+    available:
+      - enum.DamageStateVisualLayers.Base:
+          blocker-4: ""
+          blocker-5: ""
+          blocker-6: ""
+  - type: Damageable
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 25
+      behaviors:
+        - !type:DoActsBehavior
+          acts: [ "Destruction" ]

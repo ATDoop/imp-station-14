@@ -8,11 +8,6 @@
   - type: Icon
     sprite: _Impstation/Mobs/Species/Visitors/Mummy/parts.rsi
     state: full
-#  - type: Butcherable #MUMMY TODO: mummy meat
-#    butcheringType: Spike
-#    spawned:
-#    - id: FoodMeatHuman
-#      amount: 5
   - type: Body #MUMMY TODO organs
     prototype: Mummy
     requiredLegs: 2

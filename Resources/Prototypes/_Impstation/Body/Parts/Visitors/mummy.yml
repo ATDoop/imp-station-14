@@ -1,4 +1,3 @@
-#MUMMY TODO: mummy blood here
 - type: entity
   id: PartMummy
   parent: [BaseItem, BasePart]
@@ -10,9 +9,7 @@
   - type: Extractable
     juiceSolution:
       reagents:
-      - ReagentId: Fat
-        Quantity: 3
-      - ReagentId: Blood
+      - ReagentId: MummyBlood
         Quantity: 10
 
 - type: entity
@@ -25,9 +22,7 @@
   - type: Extractable
     juiceSolution:
       reagents:
-      - ReagentId: Fat
-        Quantity: 10
-      - ReagentId: Blood
+      - ReagentId: MummyBlood
         Quantity: 20
 
 - type: entity
@@ -40,9 +35,7 @@
   - type: Extractable
     juiceSolution:
       reagents:
-      - ReagentId: Fat
-        Quantity: 5
-      - ReagentId: Blood
+      - ReagentId: MummyBlood
         Quantity: 10
 
 - type: entity

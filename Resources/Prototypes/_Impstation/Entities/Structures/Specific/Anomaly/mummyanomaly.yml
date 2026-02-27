@@ -1,21 +1,23 @@
 - type: entity
   id: AnomalyMummy #dont put this in spawners! not parented to the base anomaly so i can mess with the sound and animation stuff
   name: anomummy
-  description: Thousands and thousands of year of anger condense into a single point. You're probably too close to it.
+  description: Revenge.
   suffix: Mummy
   components:
   - type: Anomaly
     corePrototype: AnomalyCoreFlesh #MUMMY TODO
     coreInertPrototype: AnomalyCoreFleshInert
-    minPulseLength: 180
-    maxPulseLength: 300
+    minPulseLength: 5 #the anomaly spawning is a fail state for the crew, fighting it should be extremely difficult
+    maxPulseLength: 10
+    growthThreshold: 0.01
+   # pulseSound:  #MUMMY TODO
     supercriticalSoundAtAnimationStart:
       collection: AnomalyFleshSupercritical #MUMMY TODO
   - type: AmbientSound
     range: 5
     volume: -5
     sound:
-      path: /Audio/Ambience/anomaly_drone.ogg #MUMMY TODO
+      path: /Audio/_Impstation/Effects/Mummies/sandstorm_loop.ogg
   - type: Transform
     anchored: false
   - type: Physics
@@ -41,7 +43,7 @@
       shader: unshaded
     - state: sarconomaly
       map: ["enum.AnomalyVisualLayers.Base"]
-    - state: sarconomaly_pulse #MUMMY TODO
+    - state: sarconomaly_pulse #MUMMY TODO ? i dont know why this is a todo
       map: ["enum.AnomalyVisualLayers.Animated"]
       visible: false
     - state: sarconomaly_face
@@ -53,7 +55,7 @@
   - type: AnimationPlayer
   - type: GuideHelp
     guides:
-    - AnomalousResearch #MUMMY TODO ?
+    - AnomalousResearch #MUMMY TODO: mummy guidebook (probably too late to read it at this point though)
   - type: EmitSoundOnSpawn
     sound:
       path: /Audio/Effects/teleport_arrival.ogg #MUMMY TODO
@@ -64,7 +66,7 @@
     damage:
       types:
         Slash: 10
-    popupText: anomaly-component-contact-damage # MUMMY TODO: something about the bandages cutting you
+    popupText: mummy-anomaly-component-contact-damage
   - type: DamageOnAttacked
     damage:
       types:
@@ -88,36 +90,41 @@
     - settings:
         spawnOnPulse: true
         spawnOnStabilityChanged: true
-        minAmount: 10
-        maxAmount: 15
+        minAmount: 25
+        maxAmount: 45
         maxRange: 5
       floor: FloorMummyDesert
     - settings:
         spawnOnSuperCritical: true
-        minAmount: 30
-        maxAmount: 75 # MUMMY TODO: check and see if this is a reasonable amount. it should be A LOT of tiles.
-        maxRange: 30
+        minAmount: 60
+        maxAmount: 150 # MUMMY TODO: check and see if this is a reasonable amount. it should be A LOT of tiles.
+        maxRange: 12
       floor: FloorMummyDesert
   - type: EntitySpawnAnomaly
     entries:
     - settings:
         spawnOnPulse: true
         minAmount: 1
-        maxAmount: 4
+        maxAmount: 2
         minRange: 1.5
-        maxRange: 2.5
+        maxRange: 5
       spawns:
-      - FleshBlocker #MUMMY TODO
+      - MummyBlocker
     - settings:
         spawnOnPulse: true
-        maxAmount: 3
-        minRange: 3
-        maxRange: 4.5
+        minAmount: 0
+        maxAmount: 1
+        minRange: 1.5
+        maxRange: 5
       spawns:
-      - MobFleshJared #MUMMY TODO
-      - MobFleshGolem
-      - MobFleshClamp
-      - MobFleshLover
+      - MummyBlockerRare
+    - settings:
+        spawnOnPulse: true
+        maxAmount: 1
+        minRange: 3
+        maxRange: 5
+      spawns:
+      - MobCanopicJarWarrior #MUMMY TODO: more mobs
     - settings:
         spawnOnSuperCritical: true
         minAmount: 10
@@ -125,26 +132,28 @@
         minRange: 5
         maxRange: 15
       spawns:
-      - FleshBlocker #MUMMY TODO
+      - MummyBlocker
+    - settings:
+        spawnOnPulse: true
+        minAmount: 0
+        maxAmount: 2
+        minRange: 5
+        maxRange: 15
+      spawns:
+      - MummyBlockerRare
     - settings:
         spawnOnSuperCritical: true
-        minAmount: 5
-        maxAmount: 10
-        maxRange: 8
+        minAmount: 4
+        maxAmount: 8
+        maxRange: 15
       spawns:
-      - MobFleshJared #MUMMY TODO
-      - MobFleshGolem
-      - MobFleshClamp
-      - MobFleshLover
+      - MobCanopicJarWarrior #MUMMY TODO: more mobs
     - settings:
         spawnOnShutdown: true
         maxAmount: 2
         maxRange: 1
       spawns:
-      - MobFleshJared #MUMMY TODO
-      - MobFleshGolem
-      - MobFleshClamp
-      - MobFleshLover
+      - MobCanopicJarWarrior #MUMMY TODO: more mobs
   - type: WallSpawnAnomaly #imp
     entries:
     - settings:
@@ -153,11 +162,11 @@
         spawnOnSeverityChanged: true
         minAmount: 3
         maxAmount: 7
-        maxRange: 4
+        maxRange: 5
       wall: WallMeat #MUMMY TODO
     - settings:
         spawnOnSuperCritical: true
         minAmount: 10
         maxAmount: 30
-        maxRange: 10
+        maxRange: 15
       wall: WallMeat #MUMMY TODO
