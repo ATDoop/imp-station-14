@@ -28,7 +28,7 @@
   parent: BaseItem
   id: CanopicJarDust
   name: strange dust
-  description: The former contents of a canopic jar. It seems to still be moving, ever so slightly...
+  description: It seems to still be moving, ever so slightly...
   components:
   - type: Item
     size: Tiny

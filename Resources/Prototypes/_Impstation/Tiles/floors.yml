@@ -100,8 +100,10 @@
     East: /Textures/_Impstation/Tiles/MummyTiles/mummysand_double_edge.png
     North: /Textures/_Impstation/Tiles/MummyTiles/mummysand_double_edge.png
     West: /Textures/_Impstation/Tiles/MummyTiles/mummysand_double_edge.png
-  baseTurf: FloorDesert
-  isSubfloor: true
+  baseTurf: Plating
+  isSubfloor: false
+  deconstructTools: [ Brushing ] #brush the sand away
+  itemDrop: CanopicJarDust
   footstepSounds:
     collection: FootstepAsteroid
   heatCapacity: 10000

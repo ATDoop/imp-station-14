@@ -270,6 +270,48 @@
   - type: Appearance
 
 - type: entity
+  parent: BaseWall
+  id: WallMummy
+  name: wrapped wall
+  description: Keeps the dust in and the looters out.
+  components:
+  - type: StaticPrice
+    price: 330
+  - type: Tag
+    tags:
+      - Wall
+  - type: Sprite
+    sprite: _Impstation/Structures/Walls/mummywall.rsi
+  - type: Icon
+    sprite: _Impstation/Structures/Walls/mummywall.rsi
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 600
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalSlam
+    - trigger:
+        !type:DamageTrigger
+        damage: 400
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalSlam
+      - !type:ChangeConstructionNodeBehavior
+        node: girder
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+  - type: IconSmooth
+    key: walls
+    base: mummy
+  - type: Appearance
+
+- type: entity
   parent: MarkerBase
   id: WallInvisiblePermanent #use this in special, non-station, non-wreck or debris maps only please!! 
   name: invisible wall

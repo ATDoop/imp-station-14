@@ -163,10 +163,10 @@
         minAmount: 3
         maxAmount: 7
         maxRange: 5
-      wall: WallMeat #MUMMY TODO
+      wall: WallMummy
     - settings:
         spawnOnSuperCritical: true
         minAmount: 10
         maxAmount: 30
         maxRange: 15
-      wall: WallMeat #MUMMY TODO
+      wall: WallMummy

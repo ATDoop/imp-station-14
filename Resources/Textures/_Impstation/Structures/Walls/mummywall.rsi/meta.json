@@ -1,0 +1,46 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "by atdoop (github)",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "full"
+    },
+    {
+      "name": "mummy0",
+        "directions": 4
+    },
+    {
+      "name": "mummy1",
+        "directions": 4
+    },
+    {
+      "name": "mummy2",
+        "directions": 4
+    },
+    {
+      "name": "mummy3",
+        "directions": 4
+    },
+    {
+      "name": "mummy4",
+        "directions": 4
+    },
+    {
+      "name": "mummy5",
+        "directions": 4
+    },
+    {
+      "name": "mummy6",
+        "directions": 4
+    },
+    {
+      "name": "mummy7",
+        "directions": 4
+    }
+  ]
+}

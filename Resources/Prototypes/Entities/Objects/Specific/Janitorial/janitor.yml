@@ -374,6 +374,7 @@
     - Brushing
     useSound:
       path: /Audio/Items/wirebrushing.ogg
+  - type: ToolTileCompatible #imp edit, allows for brushing mummy sand away
   - type: StaticPrice
     price: 22
   - type: MeleeWeapon
