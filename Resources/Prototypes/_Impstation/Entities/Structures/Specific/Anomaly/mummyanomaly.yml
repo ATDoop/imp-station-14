@@ -125,6 +125,14 @@
         maxRange: 5
       spawns:
       - MobCanopicJarWarrior #MUMMY TODO: more mobs
+    - settings: #scarabs, etc on a different setting from jar warriors because jar warriors should be guaranteed
+        spawnOnPulse: true
+        minAmount: 0
+        maxAmount: 1
+        minRange: 3
+        maxRange: 5
+      spawns:
+      - MobScarab
     - settings:
         spawnOnSuperCritical: true
         minAmount: 10
@@ -149,11 +157,25 @@
       spawns:
       - MobCanopicJarWarrior #MUMMY TODO: more mobs
     - settings:
+        spawnOnSuperCritical: true
+        minAmount: 1
+        maxAmount: 3
+        maxRange: 15
+      spawns:
+      - MobScarab
+    - settings:
         spawnOnShutdown: true
         maxAmount: 2
         maxRange: 1
       spawns:
       - MobCanopicJarWarrior #MUMMY TODO: more mobs
+    - settings:
+        spawnOnShutdown: true
+        minAmount: 0
+        maxAmount: 1
+        maxRange: 1
+      spawns:
+      - MobScarab
   - type: WallSpawnAnomaly #imp
     entries:
     - settings:

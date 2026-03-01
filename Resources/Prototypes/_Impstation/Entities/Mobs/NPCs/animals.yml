@@ -768,6 +768,7 @@
       - Dog
 
 # mummy motes. they're like diona nymphs but mummies.
+
 - type: entity
   name: dust pile
   parent: [SimpleMobBase, StripableInventoryBase]
@@ -878,3 +879,114 @@
     damage:
       types:
         Piercing: 5
+
+#mummy scarab
+
+- type: entity
+  name: scarab
+  parent: [ SimpleMobBase, FlyingMobBase, MobCombat ]
+  id: MobScarab
+  description: Go, my scarab!
+  components:
+    - type: GhostRole #MUMMY TODO
+      allowMovement: true
+      allowSpeech: true
+      makeSentient: true
+      name: ghost-role-information-sentient-carp-name
+      description: ghost-role-information-sentient-carp-description
+      rules: ghost-role-information-space-dragon-summoned-carp-rules
+      mindRoles:
+      - MindRoleGhostRoleTeamAntagonistFlock
+    - type: MovementSpeedModifier
+      baseWalkSpeed : 3
+      baseSprintSpeed : 6
+    - type: Sprite
+      drawdepth: Mobs
+      layers:
+      - map: ["enum.DamageStateVisualLayers.Base"]
+        state: alive
+        sprite: _Impstation/Mobs/Animals/scarab.rsi
+      - map: [ "enum.DamageStateVisualLayers.BaseUnshaded" ]
+        state: alive_eyes
+        sprite: _Impstation/Mobs/Animals/scarab.rsi
+        shader: unshaded
+    - type: Item
+      size: Tiny
+    - type: CanEscapeInventory
+      baseResistTime: 0.5
+    - type: HTN
+      rootTask:
+        task: SimpleHostileCompound
+    - type: Speech #MUMMY TODO
+      speechSounds: Squeak
+      speechVerb: SmallMob
+      allowedEmotes: ['Squeak']
+    - type: Fixtures
+      fixtures:
+        fix1:
+          shape:
+            !type:PhysShapeCircle
+            radius: 0.25
+          density: 10
+          mask:
+          - FlyingMobMask
+          layer:
+          - FlyingMobLayer
+    - type: DamageStateVisuals
+      sprite: _Impstation/Mobs/Animals/scarab.rsi
+      states:
+        Alive:
+          Base: alive
+          BaseUnshaded: alive_eyes
+        Dead:
+          Base: dead
+          BaseUnshaded: dead_eyes
+    - type: Butcherable
+      spawned:
+      - id: FoodMeatRotten
+        amount: 1
+    - type: Bloodstream
+      bloodReferenceSolution:
+        reagents:
+        - ReagentId: MummyBlood
+          Quantity: 15
+    - type: ReplacementAccent
+      accent: mouse #MUMMY TODO
+    - type: MeleeWeapon
+      soundHit:
+          path: /Audio/Effects/bite.ogg
+      angle: 0
+      animation: WeaponArcBite
+      damage:
+        types:
+          Piercing: 1
+    - type: MobThresholds
+      thresholds:
+        0: Alive
+        5: Dead
+    - type: Destructible
+      thresholds:
+      - trigger:
+          !type:DamageTypeTrigger
+          damageType: Blunt
+          damage: 20
+        behaviors:
+        - !type:GibBehavior
+          recursive: false
+    - type: NpcFactionMember
+      factions:
+      - Mummy
+    - type: Tag
+      tags:
+      - VimPilot
+    # imp edit start
+    - type: GoobAbsorbable # mouse bite sized
+      biomassRestored: 0.1
+    - type: Carriable #DeltaV
+    - type: NightVision # EE edit
+      isActive: true
+      toggleAction: null
+      color: "#50595C"
+      activateSound: null
+      deactivateSound: null
+    # imp edit end
