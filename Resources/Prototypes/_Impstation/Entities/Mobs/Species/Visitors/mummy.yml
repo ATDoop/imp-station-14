@@ -14,6 +14,13 @@
   - type: Damageable
     damageContainer: Biological
     damageModifierSet: Mummy
+  - type: Destructible #MUMMY TODO: figure out their health
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 200
+      behaviors:
+      - !type:GibBehavior { }
   - type: MeleeWeapon
     soundHit:
       collection: AlienClaw
@@ -28,6 +35,19 @@
     - Mummy
   - type: TypingIndicator
     proto: moth #MUMMY TODO: custom typing indicator
+  - type: Speech
+    speechVerb: Mummy
+    speechSounds: Mummy 
+    allowedEmotes: ['Meow', 'Hiss']
+    suffixSpeechVerbs:
+      chat-speech-verb-suffix-exclamation-strong: MummyExclamationStrong
+      chat-speech-verb-suffix-exclamation: MummyExclamation
+      chat-speech-verb-suffix-stutter: MummyStutter
+  - type: Vocal
+    sounds:
+      Male: UnisexMummy
+      Female: UnisexMummy
+      Unsexed: UnisexMummy
   - type: HumanoidAppearance
     species: Mummy
     hideLayersOnEquip:
@@ -38,6 +58,12 @@
   - type: Access
     tags:
     - Wizard #for sarocpogus
+  - type: Tag #mummy tag for imprinting mobs, no anomaly host tag
+    tags:
+    - CanPilot
+    - FootstepSound
+    - DoorBumpOpener
+    - Mummy
 
 - type: entity
   parent: BaseSpeciesDummy

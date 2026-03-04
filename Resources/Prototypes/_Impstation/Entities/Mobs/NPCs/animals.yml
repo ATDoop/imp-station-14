@@ -773,7 +773,7 @@
   name: dust pile
   parent: [SimpleMobBase, StripableInventoryBase]
   id: MobMummyMote
-  description: A weirdly intelligent looking pile of dust.
+  description: The dust never truly settles.
   components:
   - type: Sprite
     drawdepth: Mobs
@@ -804,17 +804,14 @@
   - type: Inventory #MUMMY TODO
     speciesId: cat
     templateId: pet
-  - type: Bloodstream #MUMMY TODO
-    bloodReagent: Sap
-    bloodMaxVolume: 60
   - type: DamageStateVisuals #MUMMY TODO: damage states for motes
     states:
       Alive:
         Base: mummymote
       Critical:
-        Base: mummymote
+        Base: mummymote-dead
       Dead:
-        Base: mummymote
+        Base: mummymote-dead
   - type: MobThresholds #MUMMY TODO
     thresholds:
       0: Alive
@@ -823,9 +820,9 @@
   - type: MovementSpeedModifier #MUMMY TODO
     baseWalkSpeed : 2.5
     baseSprintSpeed : 4.5
-  - type: Grammar #MUMMY TODO
+  - type: Grammar
     attributes:
-      gender: epicene
+      gender: neuter
   - type: Speech #MUMMY TODO
     speechVerb: Plant
     speechSounds: Alto
@@ -847,9 +844,10 @@
     soundsId: Nymph
   - type: Reform #MUMMY TODO
     actionPrototype: DionaReformAction
+    startDelayed: false #MUMMY TODO: turn this to true when done
     reformTime: 10
     popupText: diona-reform-attempt
-    reformPrototype: MobDionaReformed
+    reformPrototype: MobMummyReformed
   - type: Item
     size: Small
     heldPrefix: 0
@@ -863,7 +861,7 @@
   suffix: Accent #MUMMY TODO: these need less health than the brain
   components:
   - type: ReplacementAccent
-    accent: nymph #MUMMY TODO: mummy mote acccent (Nya nhyaa Myoaaa Myar)
+    accent: lessermummy
   - type: PleebnarGibbable
   - type: HTN
     rootTask:
@@ -888,15 +886,16 @@
   id: MobScarab
   description: Go, my scarab!
   components:
-    - type: GhostRole #MUMMY TODO
+    - type: GhostRole
       allowMovement: true
       allowSpeech: true
       makeSentient: true
-      name: ghost-role-information-sentient-carp-name
-      description: ghost-role-information-sentient-carp-description
-      rules: ghost-role-information-space-dragon-summoned-carp-rules
+      name: ghost-role-information-scarab-name
+      description: ghost-role-information-scarab-description
+      rules: ghost-role-information-scarab-rules
       mindRoles:
       - MindRoleGhostRoleTeamAntagonistFlock
+    - type: GhostTakeoverAvailable
     - type: MovementSpeedModifier
       baseWalkSpeed : 3
       baseSprintSpeed : 6
@@ -916,11 +915,15 @@
       baseResistTime: 0.5
     - type: HTN
       rootTask:
-        task: SimpleHostileCompound
-    - type: Speech #MUMMY TODO
-      speechSounds: Squeak
-      speechVerb: SmallMob
-      allowedEmotes: ['Squeak']
+        task: KillerTomatoCompound #to make them follow
+    - type: NPCImprintingOnSpawnBehaviour
+      whitelist:
+        tags:
+        - Mummy
+    - type: Speech
+      speechSounds: Arachnid
+      speechVerb: Arachnid
+      allowedEmotes: ['Chitter']
     - type: Fixtures
       fixtures:
         fix1:
@@ -951,15 +954,16 @@
         - ReagentId: MummyBlood
           Quantity: 15
     - type: ReplacementAccent
-      accent: mouse #MUMMY TODO
+      accent: scarab
     - type: MeleeWeapon
       soundHit:
           path: /Audio/Effects/bite.ogg
+      altDisarm: false #lets them wideswing
       angle: 0
       animation: WeaponArcBite
       damage:
         types:
-          Piercing: 1
+          Piercing: 2
     - type: MobThresholds
       thresholds:
         0: Alive

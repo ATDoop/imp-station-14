@@ -8,6 +8,7 @@
   save: false
   parent: MobMummy
   id: MobMummyGhostrole
+  suffix: Ghost role
   components:
   - type: GhostRole
     allowMovement: true
@@ -17,6 +18,14 @@
     description: you are a mummy # TODO
     rules: there are rules # TODO
   - type: GhostTakeoverAvailable
+
+- type: entity
+  parent: MobMummy
+  categories: [ HideSpawnMenu ]
+  id: MobMummyReformed #MUMMY TODO: this is broken
+  name: Reformed Mummy
+  components:
+    - type: RandomHumanoidAppearance 
 
 - type: entity
   name: Mummy + Sarcophagus Spawner

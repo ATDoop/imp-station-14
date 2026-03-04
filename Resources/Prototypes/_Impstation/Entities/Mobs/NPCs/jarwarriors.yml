@@ -57,20 +57,20 @@
             max: 1
   - type: MeleeWeapon
     altDisarm: false
-    angle: 0
+    angle: 45
     animation: WeaponArcDisarm #this is actually a slashing animation. WeaponArcSlash does not use its own sprite, and disarms dont use this weapon arc. what??
     soundHit:
       path: /Audio/Weapons/bladeslice.ogg
     damage:
       types:
-        Slash: 5
+        Slash: 10
   - type: MovementSpeedModifier
     baseWalkSpeed: 2
     baseSprintSpeed: 2.5 #they're not good at pursuing, they should be defending
-  - type: ReplacementAccent #MUMMY TODO
-    accent: bros
+  - type: ReplacementAccent
+    accent: lessermummy
   - type: Speech #MUMMY TODO
-    speechSounds: Bros
+    speechSounds: Baritone
     speechVerb: Bros
   - type: Vocal #MUMMY TODO
     sounds:

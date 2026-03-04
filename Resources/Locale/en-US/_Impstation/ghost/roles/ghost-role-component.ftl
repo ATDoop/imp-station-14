@@ -190,3 +190,8 @@ ghost-role-information-rock-desc = A powerfull stone monster, you must protect y
 
 ghost-role-information-magic-monkey-name = Magic monkey
 ghost-role-information-magic-monkey-desc = A wizards Apprentice.
+
+ghost-role-information-scarab-name = Scarab
+ghost-role-information-scarab-description = Help your mummy get revenge!
+ghost-role-information-scarab-rules = You are a [color=red][bold]Team Antagonist[/bold][/color] with your mummy and its allies.
+                                                          You don't remember any of your previous life, and you don't remember anything you learned as a ghost.

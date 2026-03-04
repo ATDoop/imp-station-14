@@ -316,6 +316,9 @@
   id: MultitoolDefibrillatorTarget
 
 - type: Tag
+  id: Mummy
+
+- type: Tag
   id: NullRod
 
 - type: Tag

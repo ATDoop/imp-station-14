@@ -1,0 +1,41 @@
+- type: emoteSounds
+  id: UnisexMummy
+  params:
+    variation: 0.075
+  sounds:
+    Scream:
+      path: /Audio/_Impstation/Voice/Visitors/Mummy/mummy_scream.ogg
+    Laugh:
+      path: /Audio/_Impstation/Voice/Visitors/Mummy/mummy_laugh.ogg
+    Sneeze:
+      collection: UnisexSneezes
+    Cough:
+      path: /Audio/_Impstation/Voice/Visitors/Mummy/mummy_cough.ogg
+    CatMeow:
+      collection: CatMeows
+    CatHisses:
+      collection: CatHisses
+    MonkeyScreeches:
+      collection: MonkeyScreeches
+    RobotBeep:
+      collection: RobotBeeps
+    Yawn:
+      path: /Audio/_Impstation/Voice/Visitors/Mummy/mummy_yawn.ogg
+    Snore:
+      collection: Snores
+    Sigh:
+      path: //Audio/_Impstation/Voice/Visitors/Mummy/mummy_sigh.ogg
+    Honk:
+      collection: BikeHorn
+    Crying:
+      path: /Audio/_Impstation/Voice/Visitors/Mummy/mummy_cry.ogg
+    Whistle:
+      collection: Whistles
+    Weh:
+      collection: Weh
+    Hew:
+      collection: Hew
+    Wuhey:
+      collection: Wuhey
+    Ungh:
+      collection: Ungh

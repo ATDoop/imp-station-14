@@ -127,3 +127,35 @@
   - chat-speech-verb-allulalo-2
   - chat-speech-verb-allulalo-3
   - chat-speech-verb-allulalo-4
+
+- type: speechVerb
+  id: Mummy
+  name: chat-speech-verb-name-mummy
+  speechVerbStrings:
+  - chat-speech-verb-mummy-1
+  - chat-speech-verb-mummy-2
+  - chat-speech-verb-mummy-3
+
+- type: speechVerb
+  id: MummyExclamation
+  name: chat-speech-verb-name-mummy-exclamation
+  speechVerbStrings:
+  - chat-speech-verb-mummy-exclamation-1
+  - chat-speech-verb-mummy-exclamation-2
+
+- type: speechVerb
+  id: MummyExclamationStrong
+  name: chat-speech-verb-name-mummy-exclamation-strong
+  bold: true
+  speechVerbStrings:
+  - chat-speech-verb-mummy-exclamation-strong-1
+  - chat-speech-verb-mummy-exclamation-strong-2
+  - chat-speech-verb-mummy-exclamation-strong-3
+  priority: 10
+
+- type: speechVerb
+  id: MummyStutter
+  name: chat-speech-verb-name-mummy-stutter
+  speechVerbStrings:
+  - chat-speech-verb-mummy-stutter-1
+  - chat-speech-verb-mummy-stutter-2

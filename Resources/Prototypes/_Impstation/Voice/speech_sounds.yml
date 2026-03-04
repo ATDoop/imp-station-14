@@ -92,3 +92,12 @@
     path: /Audio/_Impstation/Allulalo/allulalo_ask.ogg
   exclaimSound:
     path: /Audio/_Impstation/Allulalo/allulalo_exclaim.ogg
+
+- type: speechSounds
+  id: Mummy
+  saySound:
+    path: /Audio/_Impstation/Voice/Talk/Mummy/mummy_talk.ogg
+  askSound:
+    path: /Audio/_Impstation/Voice/Talk/Mummy/mummy_ask.ogg
+  exclaimSound:
+    path: /Audio/_Impstation/Voice/Talk/Mummy/mummy_exclaim.ogg

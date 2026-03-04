@@ -1,0 +1,11 @@
+
+- files:
+  - "mummy_scream.ogg"
+  - "mummy_laugh.ogg"
+  - "mummy_cry.ogg"
+  - "mummy_cough.ogg"
+  - "mummy_sigh.ogg"
+  - "mummy_yawn.ogg"
+  license: "CC-BY-SA-4.0" 
+  copyright: "sourced from matzka, minscer, lukey1028, dreggsome, f3bbbo, and owl_glance on freesound, edited by skeepo (discord)"
+  source: "https://github.com/ATDoop/imp-station-14/tree/mummies" #MUMMY TODO: pr link

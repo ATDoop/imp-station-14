@@ -126,3 +126,23 @@
   - accent-words-zombie-8
   - accent-words-zombie-9
   - accent-words-zombie-10
+
+- type: accent
+  id: lessermummy
+  fullReplacements:
+  - accent-words-lessermummy-1
+  - accent-words-lessermummy-2
+  - accent-words-lessermummy-3
+  - accent-words-lessermummy-4
+  - accent-words-lessermummy-5
+  - accent-words-lessermummy-6
+  - accent-words-lessermummy-7
+  - accent-words-lessermummy-8
+
+- type: accent
+  id: scarab
+  fullReplacements:
+  - accent-words-scarab-1
+  - accent-words-scarab-2
+  - accent-words-scarab-3
+  - accent-words-scarab-4

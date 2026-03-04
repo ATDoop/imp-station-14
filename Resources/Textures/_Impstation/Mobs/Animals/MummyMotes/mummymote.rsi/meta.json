@@ -10,6 +10,9 @@
         {
             "name": "mummymote",
             "directions": 4
+        },
+        {
+            "name": "mummymote-dead"
         }
     ]
 }
