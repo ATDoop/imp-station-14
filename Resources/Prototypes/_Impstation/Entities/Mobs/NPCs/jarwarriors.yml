@@ -69,14 +69,14 @@
     baseSprintSpeed: 2.5 #they're not good at pursuing, they should be defending
   - type: ReplacementAccent
     accent: lessermummy
-  - type: Speech #MUMMY TODO
-    speechSounds: Baritone
-    speechVerb: Bros
-  - type: Vocal #MUMMY TODO
+  - type: Speech
+    speechSounds: Mummy
+    speechVerb: Mummy
+  - type: Vocal
     sounds:
-      Male: Bros
-      Female: Bros
-      Unsexed: Bros
+      Male: UnisexMummy
+      Female: UnisexMummy
+      Unsexed: UnisexMummy
     wilhelmProbability: 0.001
   - type: TriggerOnMobstateChange
     mobState:

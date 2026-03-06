@@ -25,7 +25,9 @@
   id: MobMummyReformed #MUMMY TODO: this is broken
   name: Reformed Mummy
   components:
-    - type: RandomHumanoidAppearance 
+  - type: RandomHumanoidAppearance
+    randomizeName: false
+    gender: neuter
 
 - type: entity
   name: Mummy + Sarcophagus Spawner
@@ -74,6 +76,12 @@
       map: ["enum.StorageVisualLayers.Base"]
     - state: sarcophagus_door
       map: ["enum.StorageVisualLayers.Door"]
+    - state: sarcophagus_locked
+      map: ["enum.LockVisualLayers.Lock"]
+    - state: paper
+      visible: false
+      sprite: Structures/Storage/closet_labels.rsi
+      map: ["enum.PaperLabelVisuals.Layer"]
   - type: EntityStorageVisuals
     stateBaseClosed: sarcophagus
     stateDoorOpen: sarcophagus_open

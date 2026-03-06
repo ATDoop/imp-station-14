@@ -804,7 +804,7 @@
   - type: Inventory #MUMMY TODO
     speciesId: cat
     templateId: pet
-  - type: DamageStateVisuals #MUMMY TODO: damage states for motes
+  - type: DamageStateVisuals
     states:
       Alive:
         Base: mummymote

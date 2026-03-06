@@ -15,6 +15,9 @@
     },
     {
       "name": "sarcophagus_open"
+    },
+    {
+      "name": "sarcophagus_locked"
     }
   ]
 }

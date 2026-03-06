@@ -60,6 +60,7 @@
   - type: TriggerOnSpawn
   - type: ImpRepulsionOnTrigger
   - type: TileReplaceRadiusOnTrigger
+    conversionTile: FloorMummyDesert
   #- type: EmitSoundOnTrigger # We don't have a sound for it yet.
 
 - type: entity
