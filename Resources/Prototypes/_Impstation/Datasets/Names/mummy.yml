@@ -1,0 +1,11 @@
+- type: localizedDataset
+  id: NamesMummyFirst
+  values:
+    prefix: names-mummy-first-dataset-
+    count: 21
+
+- type: localizedDataset
+  id: NamesMummyLast
+  values:
+    prefix: names-mummy-last-dataset-
+    count: 30

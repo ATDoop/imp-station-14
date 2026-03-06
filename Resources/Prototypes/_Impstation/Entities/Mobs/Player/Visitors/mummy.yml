@@ -18,6 +18,14 @@
     description: you are a mummy # TODO
     rules: there are rules # TODO
   - type: GhostTakeoverAvailable
+  - type: RandomMetadata
+    nameSegments:
+    - NamesMummyFirst
+    - NamesMummyLast
+    nameFormat: name-format-standard
+  - type: RandomHumanoidAppearance
+    randomizeName: false
+    gender: neuter
 
 - type: entity
   parent: MobMummy

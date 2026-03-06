@@ -9,9 +9,9 @@
   markingLimits: MobMummyMarkingLimits
   dollPrototype: MobMummyDummy
   skinColoration: TintedHues
-  maleFirstNames: NamesMummyFirst #MUMMY TODO
-  femaleFirstNames: NamesMummyFirst #MUMMY TODO
-  lastNames: NamesMummyLast #MUMMY TODO
+  maleFirstNames: NamesMummyFirst
+  femaleFirstNames: NamesMummyFirst
+  lastNames: NamesMummyLast
   sexes:
   - Unsexed
   youngAge: 1
