@@ -34,7 +34,7 @@
     factions:
     - Mummy
   - type: TypingIndicator
-    proto: moth #MUMMY TODO: custom typing indicator
+    proto: mummy
   - type: Speech
     speechVerb: Mummy
     speechSounds: Mummy 
@@ -70,6 +70,10 @@
   id: MobMummyDummy
   categories: [ HideSpawnMenu ]
   components:
+  - type: HumanoidAppearance
+    species: Mummy
+    hideLayersOnEquip:
+    - HeadTop
   - type: Inventory
     speciesId: mummy
     templateId: mummy

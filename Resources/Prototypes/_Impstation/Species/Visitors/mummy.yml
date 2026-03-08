@@ -14,9 +14,10 @@
   lastNames: NamesMummyLast
   sexes:
   - Unsexed
+  minAge: 1
   youngAge: 1
-  oldAge: 2
-  ancientAge: 3 # I'm Old!
+  oldAge: 1
+  ancientAge: 1 # I'm Old!
 
 - type: speciesBaseSprites
   id: MobMummySprites

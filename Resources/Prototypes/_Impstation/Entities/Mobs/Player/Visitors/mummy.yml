@@ -17,6 +17,8 @@
     name: mummy # TODO
     description: you are a mummy # TODO
     rules: there are rules # TODO
+    mindRoles:
+    - MindRoleGhostRoleSoloAntagonist #mummy todo, mummy mind role?
   - type: GhostTakeoverAvailable
   - type: RandomMetadata
     nameSegments:

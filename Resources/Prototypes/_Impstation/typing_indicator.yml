@@ -56,3 +56,10 @@
   typingState: ungu
   idleState: ungu
   offset: 0, 0.1
+
+- type: typingIndicator
+  id: mummy
+  spritePath: /Textures/_Impstation/Effects/speech.rsi
+  typingState: mummytyping
+  idleState: mummytyping-idle
+  offset: -0.15, 0.1
