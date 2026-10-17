@@ -1,0 +1,10 @@
+- type: reagent
+  id: PigIron #pig iron is on the periodic table look it up!
+  name: reagent-name-pigiron
+  group: Elements
+  desc: reagent-desc-pigiron
+  physicalDesc: reagent-physical-desc-metallic
+  flavor: metallic
+  color: "#f7b6e1"
+  boilingPoint: 3134.15
+  meltingPoint: 1423.15

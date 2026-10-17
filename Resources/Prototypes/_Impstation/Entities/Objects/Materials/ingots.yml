@@ -1,0 +1,47 @@
+- type: entity
+  parent: IngotBase
+  id: IngotPigIron
+  name: pig iron bar
+  description: Generally regarded to be worth less than the dirt off the bottom of your damn shoe. Unless...
+  suffix: Full
+  components:
+  - type: Material
+  - type: PhysicalComposition
+    materialComposition:
+      PigIron: 100
+  - type: Stack
+    stackType: PigIron
+    baseLayer: base
+    layerStates:
+    - pigiron
+    - pigiron_2
+    - pigiron_3
+  - type: Sprite
+    state: pigiron_3
+    layers:
+    - state: pigiron_3
+      map: ["base"]
+  - type: Item
+    heldPrefix: pigiron
+  - type: Appearance
+  - type: Extractable
+    grindableSolutionName: pigiron
+  - type: SolutionContainerManager
+    solutions:
+      pigiron:
+        reagents:
+        - ReagentId: PigIron
+          Quantity: 10
+  - type: PluralName # imp
+    nameSomeOf: pig iron bars
+
+- type: entity
+  parent: IngotPigIron
+  id: IngotPigIron1
+  name: pig iron bar
+  suffix: Single
+  components:
+  - type: Sprite
+    state: pigiron
+  - type: Stack
+    count: 1

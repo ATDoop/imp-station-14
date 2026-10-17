@@ -6,3 +6,12 @@
   icon: { sprite: /Textures/Objects/Materials/materials.rsi, state: hemp_cloth }
   color: "#e7e7de"
   price: 0.03
+
+- type: material
+  id: PigIron
+  stackEntity: PigIron1
+  name: materials-pigiron
+  unit: materials-unit-bar
+  icon: { sprite: _Impstation/Objects/Materials/ingots.rsi, state: pigiron }
+  color: "#f7b6e1"
+  price: -0.1 # -$10 for 1 unit.

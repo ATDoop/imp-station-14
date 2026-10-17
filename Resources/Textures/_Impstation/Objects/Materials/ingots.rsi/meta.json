@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "pig iron by atdoop (github)",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "pigiron"
+    },
+    {
+      "name": "pigiron_2"
+    },
+    {
+      "name": "pigiron_3"
+    },
+    {
+      "name": "pigiron-inhand-left",
+      "directions": 4
+    },
+    {
+      "name": "pigiron-inhand-right",
+      "directions": 4
+    }
+  ]
+}

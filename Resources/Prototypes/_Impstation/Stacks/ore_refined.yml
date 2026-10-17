@@ -1,0 +1,6 @@
+- type: stack
+  parent: BaseMediumStack
+  id: PigIron
+  name: stack-pigiron
+  icon: { sprite: "/Textures/_Impstation/Objects/Materials/ingots.rsi", state: pigiron }
+  spawn: IngotPigIron1
